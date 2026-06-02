@@ -7,14 +7,14 @@ num =int(input("Please Enter the your Favourite Number : "))
 year =int(input("Please Enter the current Year : "))
 print("\nThank you ! here the information we have collected\n\n")
 
-# type cast
+
 
 print("Name :",name,"(Type : ",type(name),",memory address :",id(name),")")
 print("Age :",age,"(Type : ",type(age),",memory address :",id(age),")")
 print("Height :",height,"(Type : ",type(height),",memory address :",id(height),")")
 print("Favourite number:",num,"(Type : ",type(num),",memory address :",id(num),")")
 
-# year
+
 
 year= year-age
 

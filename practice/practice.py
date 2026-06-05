@@ -152,89 +152,86 @@
 #     case _:
 #         print("invalid")
 
-print("\nenter 1 to buy pizza")
-print("enter 2 to buy chips")
-print("enter 3 to buy burger")
-print("enter 4 to buy sandwich")
+# print("\nenter 1 to buy pizza")
+# print("enter 2 to buy chips")
+# print("enter 3 to buy burger")
+# print("enter 4 to buy sandwich")
 
-# sub_choice=0
-# sub_choice1=0
-# sub_choice2=0
-# sub_choice3=0
 
-choice = int(input("\n\nEnter the choice number : "))
 
-match choice:
-    case 1:
-        print("\n\nEnter 1 to buy cheese pizza ")
-        print("Enter 2 to buy maxicon pizza ")
-        print("Enter 3 to buy americon pizza ")
+# choice = int(input("\n\nEnter the choice number : "))
 
-        sub_choice= int (input("\nenter the number to buy :"))
+# match choice:
+#     case 1:
+#         print("\n\nEnter 1 to buy cheese pizza ")
+#         print("Enter 2 to buy maxicon pizza ")
+#         print("Enter 3 to buy americon pizza ")
+
+#         sub_choice= int (input("\nenter the number to buy :"))
 
             
-        match sub_choice:
-            case 1:
-                print("\nYou order the cheese pizza")
-            case 2:
-                print("\nYou order the maxicon pizza ")
-            case 3:
-                print("\nYou order the americon pizza")
-            case _:
-                print("invalid")
+#         match sub_choice:
+#             case 1:
+#                 print("\nYou order the cheese pizza")
+#             case 2:
+#                 print("\nYou order the maxicon pizza ")
+#             case 3:
+#                 print("\nYou order the americon pizza")
+#             case _:
+#                 print("invalid")
 
-    case 2:
-        print("\nEnter 1 to buy potato chips")
-        print("Enter 2 to buy  banana chips")
-        print("Enter 3 to buy cheese potato chips ")
+#     case 2:
+#         print("\nEnter 1 to buy potato chips")
+#         print("Enter 2 to buy  banana chips")
+#         print("Enter 3 to buy cheese potato chips ")
 
-        sub_choice1= int (input("\nenter the number to buy :"))
+#         sub_choice1= int (input("\nenter the number to buy :"))
         
-        match sub_choice1:
-            case 1:
-                print("\nYou order the potato chips")
-            case 2:
-                print("\nYou order the banana chips ")
-            case 3:
-                print("\nYou order the cheese potato chips")
-            case _:
-                print("invalid")
+#         match sub_choice1:
+#             case 1:
+#                 print("\nYou order the potato chips")
+#             case 2:
+#                 print("\nYou order the banana chips ")
+#             case 3:
+#                 print("\nYou order the cheese potato chips")
+#             case _:
+#                 print("invalid")
         
-    case 3:
-        print("\nEnter 1 to buy veg burger ")
-        print("Enter 2 to buy aloo tiki burger ")
-        print("Enter 3 to buy cheese non veg burger ")
+#     case 3:
+#         print("\nEnter 1 to buy veg burger ")
+#         print("Enter 2 to buy aloo tiki burger ")
+#         print("Enter 3 to buy cheese non veg burger ")
 
-        sub_choice2= int (input("\nenter the number to buy :"))
+#         sub_choice2= int (input("\nenter the number to buy :"))
         
-        match sub_choice2:
-            case 1:
-                print("\nYou order the veg burger")
-            case 2:
-                print("\nYou order the aloo tiki burger ")
-            case 3:
-                print("\nYou order the cheese non veg burger")
-            case _:
-                print("invalid")
-    case 4:
-        print("\nEnter 1 to buy cheese sandwich")
-        print("Enter 2 to buy cheese garlic sandwich ")
-        print("Enter 3 to buy cheese pienapeal sandwich ")
+#         match sub_choice2:
+#             case 1:
+#                 print("\nYou order the veg burger")
+#             case 2:
+#                 print("\nYou order the aloo tiki burger ")
+#             case 3:
+#                 print("\nYou order the cheese non veg burger")
+#             case _:
+#                 print("invalid")
+#     case 4:
+#         print("\nEnter 1 to buy cheese sandwich")
+#         print("Enter 2 to buy cheese garlic sandwich ")
+#         print("Enter 3 to buy cheese pienapeal sandwich ")
 
-        sub_choice3= int (input("\nenter the number to buy :"))
+#         sub_choice3= int (input("\nenter the number to buy :"))
         
-        match sub_choice3:
-            case 1:
-                print("\nYou order the cheese sandwich")
-            case 2:
-                print("\nYou order the cheese garlic sandwich")
-            case 3:
-                print("\nYou order the cheese pienapeal sandwich")
-            case _:
-                print("invalid")
+#         match sub_choice3:
+#             case 1:
+#                 print("\nYou order the cheese sandwich")
+#             case 2:
+#                 print("\nYou order the cheese garlic sandwich")
+#             case 3:
+#                 print("\nYou order the cheese pienapeal sandwich")
+#             case _:
+#                 print("invalid")
 
-    case _:
-        print("Invalid")
+#     case _:
+#         print("Invalid")
         
 
 
@@ -278,6 +275,39 @@ match choice:
 #         print("\nYou order the cheese pienapeal sandwich")
 #     case _:
 #         print("invalid")
-       
+#                 
                 
-                
+# while True:
+#     num=int(input("enter the 0 to exit :"))
+#     if num==0:
+#         break
+
+# for i in range(0,10):
+#     print(i+1 ,"X",i+1,"=",(i+1)*(i+1))
+
+# i=0
+
+
+# while i<51:
+
+#     i+=1
+#     if i%2==0:
+#         print(i,"Number is even")
+#     # else:
+#     #     print(i,"Number is Odd")
+    
+
+# for i in range (1,20):
+#     if i%2==0:
+#         print()
+#     else:
+#         print(i,"number is Odd")
+
+
+for i in range(1,50):
+    if i%2==0:
+        print(i, "\nNumber is divided by 2")
+    elif i%3==0:
+        print(i ,"\nNumber is divided by 3")
+    else:
+        print(i ,"Number is divided by both")

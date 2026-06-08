@@ -304,10 +304,46 @@
 #         print(i,"number is Odd")
 
 
-for i in range(1,50):
-    if i%2==0:
-        print(i, "\nNumber is divided by 2")
-    elif i%3==0:
-        print(i ,"\nNumber is divided by 3")
-    else:
-        print(i ,"Number is divided by both")
+# for i in range(1,50):
+#     if i%2==0:
+#         print(i, "\nNumber is divided by 2")
+#     elif i%3==0:
+#         print(i ,"\nNumber is divided by 3")
+#     else:
+#         print(i ,"Number is divided by both")
+
+#         lab 2.4
+
+
+
+
+# for i in range(1,20):
+#     if i%4==0:
+#         continue
+#     print(i)
+
+
+
+# while True:
+
+#     num=int(input("Enter the number(1 to 10) : "))
+
+#     if num==7:
+#         break
+#     else:
+#         print("Your number is ",num)
+
+
+
+# name=str(input("Enter the name :"))
+
+# for vowel in name:
+#     if vowel in "AEIOUaeiou":
+#         continue
+#     print(vowel,end=" ")
+
+tabel=int(input("\nEnter the tabel :"))
+
+
+
+    

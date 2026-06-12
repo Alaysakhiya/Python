@@ -358,8 +358,8 @@
 #         print(j,end=" ")
 #     print()
 
-a ="alay sakhiya"
-b="sakhiya"
+# a ="alay sakhiya"
+# b="sakhiya"
 
 
-print(a.replace("alay" ,"hello"))
+# print(a.replace("alay" ,"hello"))

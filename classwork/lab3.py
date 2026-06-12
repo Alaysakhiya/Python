@@ -29,13 +29,32 @@
 #     print(list)
 
 
-li=[32,92,61,16,32]
+# li=[32,92,61,16,32]
 
 
-for i in li:
-    if i==32:
-        li.remove(32)
-        print(li)
+# for i in li:
+#     if i==32:
+#         li.remove(32)
+        # print(li)
 
 
 # print(li)
+
+
+# t =(10,20,30)
+# li=[10,20,30]
+
+
+# # print(t)
+# # print(t[0:4])
+# # print(t[-1])
+# # print(t[2])
+
+# li[0]=60
+# # t[0]=60
+
+# print(li)
+
+
+
+# print(t)

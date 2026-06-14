@@ -53,8 +53,90 @@
 # li[0]=60
 # # t[0]=60
 
+# print
+
+                
+
+# li=[0]
+                
+# for i in range(21):
+        
+#         li+=[i]
+        
 # print(li)
 
 
+# even=[i for i in range(1,21)if i % 2==0]
+# li2=even
 
+
+# print (even)
+# print(
+
+
+
+# name="ALAy Sakhiya"
+
+# vowel="aeiou"
+
+# no=[char for char in name if char.lower() not in vowel]
+
+# print("".join(no))
+
+# t=(25,)
 # print(t)
+# del t
+
+
+# set={62,152,32,62}
+
+# print(set)
+
+        
+# set2= set ([1,9,6,6,5,2])
+# # set3= set ([input("Enter the num = ")])
+# print(set2)
+
+# set={0,1,2,3,4,5}
+# for i in set:
+# #         print(i) 
+
+# print(set)
+# # remove=set.pop()
+
+
+# print(set.pop())
+# print(set)
+
+# remove=set={0,1,2,3,4,5}
+
+# remove.pop()
+# print()
+
+# set={1,2,4,5}
+# set2={1,3,5,9,10}
+
+# set2.add(6)
+# set2.remove(3)
+
+# print(2 in set2)
+# print(set2)
+# print(2 in set)
+# print(set)
+
+
+set={1,2,3,4}
+set2={3,4,5,6}
+
+union=set2.union(set)
+print(union)
+print()
+
+inter=set.intersection(set2)
+print(inter)
+print()
+
+diff=set.difference(set2)
+set2.difference_update(set)
+print(diff)
+print(set2)

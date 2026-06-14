@@ -363,3 +363,74 @@
 
 
 # print(a.replace("alay" ,"hello"))
+
+
+
+
+
+li=[]
+
+
+print("\nWelcome to our programme\n")
+
+print('''Selcet a opition 
+Enter 1 to create a list
+Enter 2 to read a list
+Enter 3 to update the elements of the list
+Enter 4 to delete the elements of the list
+Enter 0 to exit
+''')
+
+while True:
+
+    opition=int(input("\nEnter the your opition = "))
+
+    if opition==1:
+        num=int(input('Enter the number to create the list : '))
+
+        for i in range(num):
+
+            a=int(input(f"Enter the {i+1} => "))
+            li.append(a)
+
+        print("\nList is created !")
+
+    elif opition==2:
+        print()
+        for i in li:
+            print(i,end=" ")
+        print()
+
+    elif opition==3:
+        idx=int(input("\nEnter the index number : "))
+        val=int(input("Enter the new value : "))
+        if idx>=0 and idx<=len(li):
+            li[idx-1]=val
+
+            print("\nList is updated !")
+        
+        else:
+            print("\nInvalid !")
+
+    elif opition==4:
+            
+        idx=int(input("\nEnter the index number : "))
+        
+        if idx>=0 and idx<=len(li):
+            li.pop(idx-1)
+    
+            print("\nList of element is deleted !")
+        
+        else:
+            print("\nInvalid !")
+
+    elif opition==0:
+
+        print("\nProgramme is closed !")
+        break
+
+
+    else:
+        print("\nInvalid !")
+        break
+

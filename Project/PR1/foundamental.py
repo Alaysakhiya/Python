@@ -1,4 +1,4 @@
-print("\nWelcome to the Interactive Personal Data Collecter !\n\n")
+print("\nWelcome to the Interactive Personal Data Collector !\n\n")
 
 name = str(input("Please Enter the your Name : " ))
 age = int(input("Please Enter the your Age : "))

@@ -483,6 +483,15 @@
 
 # for i in std:
 #     print(i)
-    
+
 #     avg=sum(i["score"])/len(std["score"])    
 # print(avg)
+
+
+a=  {
+ "name" :"alay",
+ "age" :18,
+
+}
+
+print(a)

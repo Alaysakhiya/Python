@@ -368,69 +368,107 @@
 
 
 
-li=[]
+# li=[]
 
 
-print("\nWelcome to our programme\n")
+# print("\nWelcome to our programme\n")
 
-print('''Selcet a opition 
-Enter 1 to create a list
-Enter 2 to read a list
-Enter 3 to update the elements of the list
-Enter 4 to delete the elements of the list
-Enter 0 to exit
-''')
+# print('''Selcet a opition 
+# Enter 1 to create a list
+# Enter 2 to read a list
+# Enter 3 to update the elements of the list
+# Enter 4 to delete the elements of the list
+# Enter 0 to exit
+# ''')
 
-while True:
+# while True:
 
-    opition=int(input("\nEnter the your opition = "))
+#     opition=int(input("\nEnter the your opition = "))
 
-    if opition==1:
-        num=int(input('Enter the number to create the list : '))
+#     if opition==1:
+#         num=int(input('Enter the number to create the list : '))
 
-        for i in range(num):
+#         for i in range(num):
 
-            a=int(input(f"Enter the {i+1} => "))
-            li.append(a)
+#             a=int(input(f"Enter the {i+1} => "))
+#             li.append(a)
 
-        print("\nList is created !")
+#         print("\nList is created !")
 
-    elif opition==2:
-        print()
-        for i in li:
-            print(i,end=" ")
-        print()
+#     elif opition==2:
+#         print()
+#         for i in li:
+#             print(i,end=" ")
+#         print()
 
-    elif opition==3:
-        idx=int(input("\nEnter the index number : "))
-        val=int(input("Enter the new value : "))
-        if idx>=0 and idx<=len(li):
-            li[idx-1]=val
+#     elif opition==3:
+#         idx=int(input("\nEnter the index number : "))
+#         val=int(input("Enter the new value : "))
+#         if idx>=0 and idx<=len(li):
+#             li[idx-1]=val
 
-            print("\nList is updated !")
+#             print("\nList is updated !")
         
-        else:
-            print("\nInvalid !")
+#         else:
+#             print("\nInvalid !")
 
-    elif opition==4:
+#     elif opition==4:
             
-        idx=int(input("\nEnter the index number : "))
+#         idx=int(input("\nEnter the index number : "))
         
-        if idx>=0 and idx<=len(li):
-            li.pop(idx-1)
+#         if idx>=0 and idx<=len(li):
+#             li.pop(idx-1)
     
-            print("\nList of element is deleted !")
+#             print("\nList of element is deleted !")
         
-        else:
-            print("\nInvalid !")
+#         else:
+#             print("\nInvalid !")
 
-    elif opition==0:
+#     elif opition==0:
 
-        print("\nProgramme is closed !")
-        break
+#         print("\nProgramme is closed !")
+#         break
 
 
-    else:
-        print("\nInvalid !")
-        break
+#     else:
+#         print("\nInvalid !")
+#         break
+
+
+# student ={
+
+#     "name" : "Alay",
+#     "age" : 18,
+#     "gread" :"A"
+
+# }
+# student["city"]="Delhi"
+# student["age"]="25"
+# del student["gread"]
+
+# print(student)
+
+# li=["id","name","e-mail"]
+# li2=["101","Alay","alaysakhiya@gmail.com"]
+
+# d={
+#     li[0] :li2[0],
+#     li[1] :li2[1],
+#     li[2] :li2[2],
+
+# }
+
+# print(d)
+
+
+# a=int("123")
+# b=tuple([1,2,3,52,62])
+# c=list((62,25,42,95))
+# d=dict([(1,'A'), (2,'B')])
+
+# print(a)
+# print(b)
+# print(c)
+# print(d,type(d))
+
 

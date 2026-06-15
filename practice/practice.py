@@ -469,6 +469,20 @@
 # print(a)
 # print(b)
 # print(c)
-# print(d,type(d))
+# print(d,type(d))std=[
 
 
+
+# std=[
+#     {"id":101 , "name":"Alay", "score" : 90},
+#     {"id":102 , "name":"Avinash", "score" : 65},
+#     {"id":103 , "name":"Krish", "score" : 53}
+# ]
+
+
+
+# for i in std:
+#     print(i)
+    
+#     avg=sum(i["score"])/len(std["score"])    
+# print(avg)

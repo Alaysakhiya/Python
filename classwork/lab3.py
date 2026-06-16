@@ -125,18 +125,76 @@
 # print(set)
 
 
-set={1,2,3,4}
-set2={3,4,5,6}
+# set={1,2,3,4}
+# set2={3,4,5,6}
 
-union=set2.union(set)
-print(union)
-print()
+# union=set2.union(set)
+# print(union)
+# print()
 
-inter=set.intersection(set2)
-print(inter)
-print()
+# inter=set.intersection(set2)
+# print(inter)
+# print()
 
-diff=set.difference(set2)
-set2.difference_update(set)
-print(diff)
-print(set2)
+# diff=set.difference(set2)
+# set2.difference_update(set)
+# print(diff)
+# print(set2)
+
+student=[
+
+{"Id" : 1,"name": "Alay","age" : 18,"subject" : "eng, hindi"},
+{"Id" : 2,"name": "Avinash","age" : 23,"subject" : "eng, hindi"},
+{"Id" : 3,"name": "Krish","age" : 38,"subject" : "eng, hindi"},
+{"Id" : 4,"name": "Ayush","age" : 26,"subject" : "eng, hindi"}
+]
+
+
+
+
+while True:
+   
+        print('''\nList of choice
+              
+        Enter 1 to add a student
+        Enter 2 to view students
+        Enter 3 to delete student
+        Enter 4 to update student
+        Enter 0 to exit              
+                ''')
+
+        choice=int(input("Enter the your choice : "))
+
+        if choice==1:
+                st ={
+                        "Id" :len(student)+1,
+                        "name": input("Enter the new student name : "),
+                        "age" : int(input("Enter the new student age : ")),
+                        "subject" : set(input("Enter the new student subjects by comma(,) : ").split(","))
+                }
+
+                student.append(st)
+
+                print("\nStudent added successfully !" )
+
+        elif choice==2:
+
+                for st in student:
+                        print(f"Id : {st["Id"][0]} Name : {st["name"]} subject : {",".join(st['subject'])}")
+
+
+        elif choice==3:
+                id=list(input("Enter the id to delete the student : "))
+                
+                for i in student:
+                        student.remove(id)
+
+                print(student)        
+
+
+
+
+
+
+
+

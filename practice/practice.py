@@ -533,12 +533,6 @@
 #     print("Student ID not found!")
 # print(student)
 
-student=[
-
-    {"id" : 1, "Name" : "Alay", "age" :19, "score" : "80"},
-    {"id" : 2, "Name" : "Avinash", "age" :23, "score" : "90"},
-    {"id" : 3, "Name" : "krish", "age" :26 , "score" : "63"}
-]
 
 # name=str(input("Enter the student name to delete : "))
 # found=False
@@ -548,8 +542,48 @@ student=[
 #     if i["Name"]==name:
 #         found=True
 #         student.remove(i)
-#         print(student)
+# #         print(student)
+# found=False
+# for i in student:
+#     if int(i ["score"])>=80:
+#         print(i["Name"])
+#         found=True
+
+student=[
+
+    {"id" : 1, "Name" : "Alay", "age" :19, "score" : "90"},
+    {"id" : 2, "Name" : "Avinash", "age" :23, "score" : "99"},
+    {"id" : 3, "Name" : "krish", "age" :26 , "score" : "3"}
+]
+
+Acount=0
+Bcount=0
+Ccount=0
+Fcount=0
 
 for i in student:
-    if i["score"]==80:
-        print(i["Name"])
+    score=int(int(i["score"]))
+
+    if score>=90:
+        i[ "Grade"]='A'
+        Acount+=1
+
+    elif score>=80 and score<= 89:
+        i["Grade"]='B'
+        Bcount+=1
+
+    elif score>=79:
+        i["Grade"]='C'
+        Ccount+=1
+
+    else:
+        i["Grade"]='F'
+        Fcount+=1
+
+    print(f"Name :{i["Name"]} | SCORE : {i["score"]} | Grade :{i["Grade"]} ")
+
+
+print(f"{Acount} student get A grade")
+print(f"{Bcount} student get B grade")
+print(f"{Ccount} student get C grade")
+print(f"{Fcount} student get F grade")

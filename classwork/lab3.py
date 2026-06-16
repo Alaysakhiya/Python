@@ -143,10 +143,10 @@
 
 student=[
 
-{"Id" : 1,"name": "Alay","age" : 18,"subject" : "eng, hindi"},
-{"Id" : 2,"name": "Avinash","age" : 23,"subject" : "eng, hindi"},
-{"Id" : 3,"name": "Krish","age" : 38,"subject" : "eng, hindi"},
-{"Id" : 4,"name": "Ayush","age" : 26,"subject" : "eng, hindi"}
+{"Id" : 1,"name": "Alay","age" : 18, "subject" : set(["eng,hindi"])},
+{"Id" : 2,"name": "Avinash","age" : 23, "subject" : set(["eng,hindi"])},
+{"Id" : 3,"name": "Krish","age" : 38, "subject" : set(["eng,hindi"])},
+{"Id" : 4,"name": "Ayush","age" : 26, "subject" : set(["eng,hindi"])}
 ]
 
 
@@ -179,17 +179,45 @@ while True:
 
         elif choice==2:
 
-                for st in student:
-                        print(f"Id : {st["Id"][0]} Name : {st["name"]} subject : {",".join(st['subject'])}")
+                for i in student:
+                        print(f"Id : {i["Id"]} Name : {i["name"]} subject : {", ".join((i["subject"]))}")
 
 
         elif choice==3:
-                id=list(input("Enter the id to delete the student : "))
-                
+                id=int(input("Enter the id to delete the student : "))
+                found=False
                 for i in student:
-                        student.remove(id)
+                        if i["Id"]-1==id-1:
+                                student.remove(i)
+                                found==True
+                                print("\nStudent is deleted successfully !")
+                                
+                if found==False:
+                        print("Student ID is not found")              
 
-                print(student)        
+        elif choice==4:
+                id=int(input("Enter the id to update the student : "))
+                found=False
+                for i in student:
+                        if i["Id"]==id-1:
+                                i["name"]=input("Enter the new student name : ")
+                                i["subject"]= set(input("Enter the new student subjects by comma(,) : ").split(","))
+                                i["age"]=int(input("Enter the new student age : "))
+
+                if found==False:
+                        print("Student ID is not found")  
+        elif choice ==0:
+
+                print("\nProgramme is successfully closed !")      
+                break
+
+        else:
+                print("Invalid !")
+                break
+
+                                         
+
+        
 
 
 

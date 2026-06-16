@@ -442,7 +442,7 @@
 #     "gread" :"A"
 
 # }
-# student["city"]="Delhi"
+# student["score"]="Delhi"
 # student["age"]="25"
 # del student["gread"]
 
@@ -484,14 +484,72 @@
 # for i in std:
 #     print(i)
 
-#     avg=sum(i["score"])/len(std["score"])    
+#     avg=sum(i["score"])/len(std["score"]) a   
 # print(avg)
 
 
-a=  {
- "name" :"alay",
- "age" :18,
 
-}
+# for i in student:
+#     print(f"name :",i["name"])
+# st={
+#     "id":len(student)+1,
+#     "name" : input("Enter the new name : "),
+#     "age" : int(input("Enter the new age :")),
+#     "score" : int(input("Enter the new score : "))
+# }
 
-print(a)
+# student.append(st)
+
+
+# for st in student:
+#     print(st)
+
+
+
+# id=int(input("Enter the id number to update the score : "))
+# up_score=int(input("Enter the new score :"))
+
+# found=False
+
+# for i in student:
+#     if student[""]==id:
+#         student["score"]==up_score
+#         found=True
+#         print(student)
+
+
+# update_id = int(input("\nEnter Student ID to Update Score: "))
+# new_score = int(input("Enter New Score: "))
+
+# found = False
+# for student in student:
+#     if student["id"] == update_id:
+#         student["score"] = new_score
+#         found = True
+#         print("Score Updated Successfully!")
+#         break
+
+# if not found:
+#     print("Student ID not found!")
+# print(student)
+
+student=[
+
+    {"id" : 1, "Name" : "Alay", "age" :19, "score" : "80"},
+    {"id" : 2, "Name" : "Avinash", "age" :23, "score" : "90"},
+    {"id" : 3, "Name" : "krish", "age" :26 , "score" : "63"}
+]
+
+# name=str(input("Enter the student name to delete : "))
+# found=False
+
+
+# for i in student:
+#     if i["Name"]==name:
+#         found=True
+#         student.remove(i)
+#         print(student)
+
+for i in student:
+    if i["score"]==80:
+        print(i["Name"])

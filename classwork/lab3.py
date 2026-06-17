@@ -188,8 +188,8 @@ while True:
                 found=False
                 for i in student:
                         if i["Id"]-1==id-1:
+                                found=True
                                 student.remove(i)
-                                found==True
                                 print("\nStudent is deleted successfully !")
                                 
                 if found==False:
@@ -200,6 +200,7 @@ while True:
                 found=False
                 for i in student:
                         if i["Id"]==id-1:
+                                found=True
                                 i["name"]=input("Enter the new student name : ")
                                 i["subject"]= set(input("Enter the new student subjects by comma(,) : ").split(","))
                                 i["age"]=int(input("Enter the new student age : "))
@@ -208,7 +209,7 @@ while True:
                         print("Student ID is not found")  
         elif choice ==0:
 
-                print("\nProgramme is successfully closed !")      
+                print("\nProgramme is successfully closed !\n")      
                 break
 
         else:

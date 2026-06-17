@@ -7,9 +7,7 @@
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 ![CLI](https://img.shields.io/badge/Application-CLI-orange?style=for-the-badge)
-<p align="center">
-  <img src="assets/banner.png" width="100%">
-</p>
+<img src="https://raw.githubusercontent.com/Alaysakhiya/Python/main/assets/banner.png">
 
 ### 📚 Organize • Manage • Update • Track
 

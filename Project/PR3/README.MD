@@ -7,6 +7,9 @@
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 ![CLI](https://img.shields.io/badge/Application-CLI-orange?style=for-the-badge)
+<p align="center">
+  <img src="assets/banner.png" width="100%">
+</p>
 
 ### 📚 Organize • Manage • Update • Track
 
@@ -84,28 +87,6 @@ Each record contains:
 ✔ Real-World Data Handling
 
 ✔ Strong Use of Python Collections
-
----
-
-## 🚀 Getting Started
-
-### Clone the Repository
-
-```bash
-git clone <your-repository-url>
-```
-
-### Navigate to the Project Folder
-
-```bash
-cd Student-Data-Organizer
-```
-
-### Run the Application
-
-```bash
-python main.py
-```
 
 ---
 

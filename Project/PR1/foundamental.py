@@ -9,7 +9,6 @@ print("\nThank you ! here the information we have collected\n\n")
 
 
 
-
 print("Name :",name,"(Type : ",type(name),",memory address :",id(name),")")
 print("Age :",age,"(Type : ",type(age),",memory address :",id(age),")")
 print("Height :",height,"(Type : ",type(height),",memory address :",id(height),")")

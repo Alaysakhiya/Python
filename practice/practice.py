@@ -609,3 +609,40 @@
 # val=pi()
 
 # print(val)
+
+
+
+# mass=int(input("Enter the weight (kg) : "))
+
+# hight=int(input("Enter the hight (in meter) : "))
+
+# hight= hight**2
+
+
+# bmi=mass/hight
+
+# print("Your BMI is : ",bmi)
+
+
+# pesos=int(input("Enter the Pesos the left : "))
+# soles=int(input("Enter the Soles the left : "))
+# reais=int(input("Enter the Reais the left : "))
+
+# pesos=pesos**0.027
+# soles=soles**27.93
+# reais=reais**18.31
+
+# rupee= (pesos + soles + reais)
+
+# print("\nYour rupees is : ",rupee)
+butterflies = 10
+beetles = 12
+ladybugs = 20
+
+total=butterflies +beetles +ladybugs 
+
+print('I caught ' + str(butterflies) + ' 🦋 butterflies!')
+print('I caught ' + str(beetles) + ' 🪲 beetles!')
+print('I caught ' + str(ladybugs) + ' 🐞 ladybugs!')
+
+print('I caught ' + str(total) + ' total bugs!')

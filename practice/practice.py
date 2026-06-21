@@ -635,14 +635,102 @@
 # rupee= (pesos + soles + reais)
 
 # print("\nYour rupees is : ",rupee)
-butterflies = 10
-beetles = 12
-ladybugs = 20
+# butterflies = 10
+# beetles = 12
+# ladybugs = 20
 
-total=butterflies +beetles +ladybugs 
+# total=butterflies +beetles +ladybugs 
 
-print('I caught ' + str(butterflies) + ' 🦋 butterflies!')
-print('I caught ' + str(beetles) + ' 🪲 beetles!')
-print('I caught ' + str(ladybugs) + ' 🐞 ladybugs!')
+# print('I caught ' + str(butterflies) + ' 🦋 butterflies!')
+# print('I caught ' + str(beetles) + ' 🪲 beetles!')
+# print('I caught ' + str(ladybugs) + ' 🐞 ladybugs!')
 
-print('I caught ' + str(total) + ' total bugs!')
+# print('I caught ' + str(total) + ' total bugs!')
+
+# def add(a, b):
+#     '''my NAme is Alay'''
+#     print(a+b)
+#     return a+b
+
+# print(add.__doc__)
+
+# add(65,235)
+
+
+# class student:
+#     '''writter student age and name'''
+
+#     def name():
+#         '''initialise the student age and name'''
+
+# print(student.__doc__)
+
+# print(student.name.__doc__)
+
+
+# """
+# operaters   
+# """
+
+# def add(a,b):
+#     """return the sum of number"""
+#     return a+b
+
+# print(add.__doc__)
+
+# def greet(name):
+#     """
+#     This funcation greet the person
+    
+#     Perameter:
+#                 name(str) : the name of the person 
+                
+#     Return :
+#                 str :greeting message 
+                           
+#                    """
+#     return f"Hello {name}"
+
+# print(greet.__doc__)
+
+
+# greet("alay")
+
+# def fact(n):
+#     if n==1:
+#         return 1
+#     elif n<=0:
+#         return 0
+#     else:
+#         return fact(n-1) + fact(n-2)
+
+# print(fact(35))    
+
+
+# def sum(n):
+
+#     if n==1:
+#         return 1
+#     else:
+#         return n +sum(n-1)
+    
+
+# for n in range(1,11):
+#     print(sum(n))
+
+
+# add = lambda a,b,c,d : (a+b)- (c/d)+(a+b+c+d)
+
+# print(add(10,5,90,30))
+
+# num=[52,42,6,9]
+
+# dou=list(filter(lambda n:n%3==0,num))
+
+# print(dou)
+
+student=[("alay",18),("avi",35),("kri",25),("weg",21)]
+
+sor=sorted(student,key=lambda x:x[1])
+
+print(sor)

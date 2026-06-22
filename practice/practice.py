@@ -729,8 +729,20 @@
 
 # print(dou)
 
-student=[("alay",18),("avi",35),("kri",25),("weg",21)]
+# student=[("alay",18),("avi",35),("kri",25),("weg",21)]
 
-sor=sorted(student,key=lambda x:x[1])
+# sor=sorted(student,key=lambda x:x[1])
 
-print(sor)
+# print(sor)
+# sdnvlsd
+# set
+
+# defbdbd
+# __build_class__
+
+arr=[
+[46,6,6,1,548,32,65,],
+[46,6,6,1,5,32,65,]
+]
+
+print(arr[1])

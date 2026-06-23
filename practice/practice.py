@@ -772,9 +772,21 @@ for i in range(num):
 # else:
 #         print("elemnt is not exits ! ")
 
-count=int(input("Enter the number to count => "))
+# count=int(input("Enter the number to count => "))
 
-print(arr.count(count))
+frequency={}
+for i in arr:
+    if i in frequency:
+                frequency[i]+=1
+    else:
+                frequency[i]=1
+
+for key,value in frequency.items():
+        print(f"{key} is {value} times in array")
+
+
+
+
 
 
 

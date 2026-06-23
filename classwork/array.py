@@ -7,7 +7,7 @@ odd=0
 
 
 print('''
-      Select the choice
+      Select the choice :
  1. to creat the array
  2. to View the array
  3. to Sum of the array
@@ -17,6 +17,7 @@ print('''
  7. to Revers the array
  8. to Check the Element is Exits
  9. to frequency frequency of each element of array
+ 0. to Exit the programme
            ''')
 
 
@@ -50,8 +51,7 @@ while True:
                 largest=i
 
         print(f"The largest number of Array is => {largest}")  
-   
-   
+
     elif choice==5:
 
         smallest=arr[0]
@@ -79,25 +79,35 @@ while True:
 
     elif choice==8:
 
-        check=int(input("Enter the Element to check => "))
+        check=int(input("\nEnter the Element to check => "))
 
-        if check==ele:
-            print("Element is exits !")
+        if check in arr:
+             print("Element is exits ")
         else:
-            print("elemnt is not exits ! ")
+             print("Element is not exits ")
+                 
 
     elif choice==9:
-        frequemcy=0
+        frequency={}
         for i in arr:
             if i in frequency:
-                frequency[i]+=1
+                        frequency[i]+=1
             else:
-                frequency[i]=1
+                        frequency[i]=1
 
-    print(frequency)
+        for key,value in frequency.items():
+                print(f"{key} ---={value} times in array")
+
+    elif choice==0:
+        print("\nProgramme is closed ! ")
+
+        break
 
 
-        
+    else:
+            print("\nInvalid !")
+            break
+
 
 
 

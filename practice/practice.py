@@ -740,9 +740,44 @@
 # defbdbd
 # __build_class__
 
-arr=[
-[46,6,6,1,548,32,65,],
-[46,6,6,1,5,32,65,]
-]
+# arr=[
+# [46,6,6,1,548,32,65,],
+# [46,6,6,1,5,32,65,]
+# ]
 
-print(arr[1])
+# print(arr[1])
+
+arr=[]
+total=0
+largest=0
+
+
+num=int(input("Enter the number to add element of the array : "))
+
+for i in range(num):
+    ele=int(input(f"Enter the no.{i+1} element : "))
+    arr.append(ele)
+
+# for i in arr:
+#     if i%2==0:
+#         print(i,"is Even")
+#     else:
+#         print(i,"is Odd")
+
+# print(arr[::-1])
+
+# Check=int(input("Enter the element : "))
+# if Check==ele:
+#         print("Element is exits !")
+# else:
+#         print("elemnt is not exits ! ")
+
+count=int(input("Enter the number to count => "))
+
+print(arr.count(count))
+
+
+
+
+
+

@@ -747,16 +747,16 @@
 
 # print(arr[1])
 
-arr=[]
-total=0
-largest=0
+# arr=[]
+# total=0
+# largest=0
 
 
-num=int(input("Enter the number to add element of the array : "))
+# num=int(input("Enter the number to add element of the array : "))
 
-for i in range(num):
-    ele=int(input(f"Enter the no.{i+1} element : "))
-    arr.append(ele)
+# for i in range(num):
+#     ele=int(input(f"Enter the no.{i+1} element : "))
+#     arr.append(ele)
 
 # for i in arr:
 #     if i%2==0:
@@ -774,19 +774,23 @@ for i in range(num):
 
 # count=int(input("Enter the number to count => "))
 
-frequency={}
-for i in arr:
-    if i in frequency:
-                frequency[i]+=1
-    else:
-                frequency[i]=1
+# frequency={}
+# for i in arr:
+#     if i in frequency:
+#                 frequency[i]+=1
+#     else:
+#                 frequency[i]=1
 
-for key,value in frequency.items():
-        print(f"{key} is {value} times in array")
-
-
+# for key,value in frequency.items():
+#         print(f"{key} is {value} times in array")
 
 
+num=[51,52,2,1,6,56]
+
+n=list(filter(lambda i :i>23,num))
+
+print(num)
+print(n)
 
 
 

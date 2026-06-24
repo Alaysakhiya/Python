@@ -16,7 +16,7 @@ print('''
  6. to Check Even or Odd number of the array
  7. to Revers the array
  8. to Check the Element is Exits
- 9. to frequency frequency of each element of array
+ 9. to frequency of each element of array
  0. to Exit the programme
            ''')
 

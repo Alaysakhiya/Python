@@ -15,6 +15,7 @@ print("Favourite number:",num,"(Type : ",type(num),",memory address :",id(num),"
 
 
 
+
 year= year-age
 
 print("\nYour birth year is approximately :",year,"(based on the your age of ",age,")")

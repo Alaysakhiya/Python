@@ -9,7 +9,7 @@ def data():
     global li
     li=list([int(i) for i in input("Enter the number sep by spaces : ").split(" ")])
     print(li) 
-    return li
+    
 
 # displaY Data
 
@@ -27,7 +27,6 @@ def summary(li):
 
 def factorial(n):
     
-    n=int(input("Enter the number to calculate factorial => "))
     if n==1:
         return 1
     return n*factorial(n-1)
@@ -40,7 +39,46 @@ def threshold():
             
     filter_from=list(filter(lambda x : x>=val,li ))
 
-    print(f"Filtered Data (value >= {val})",filter_from)  
+    print(f"Filtered Data (value >= {val}) :")
+    print(filter_from)  
+
+
+    # Sorting
+
+def sorting():
+        
+        print('''\n Enter 1 to Accending order
+Enter 2 to Descending order''')
+
+        sub_choice=int(input("Enter Sub choice : "))
+
+        if sub_choice==1:
+            print(sorted(li))
+        
+        elif sub_choice==2:
+            print(sorted(li,reverse=True,))
+
+        else:
+            print("Invalid !")
+            
+
+        # Stat dataset
+
+def Stat_data(li):
+                 
+
+    print(f"""Dataset Statistic:
+           
+    -Minimum value : {min(li)}  
+    -Maximum value : {max(li)}  
+    -Sum of all value : {sum(li)}
+    -Average value : {sum(li)/len(li)}
+    """)
+
+def exit():
+    print("Thank you for visting Data Analyzer and Transformer Program !")
+        
+
 
 while True:
 
@@ -53,13 +91,12 @@ while True:
 5. Sort Data
 6. Display Dataset Statistics (Return Multiple Values)
 7. Exit Program 
-          """)
+        """)
     
 
     choice=int(input("Enter the choice = "))
 
     if choice==1:
-        
         data()
         print("\nData has been stored Successfully !")
 
@@ -67,9 +104,26 @@ while True:
         summary(li)
 
     elif choice==3:
-
+        n=int(input("Enter the number to calculate factorial => "))
+    
         print(f"factorial of {n} is",factorial(n))
 
     elif choice==4:
 
-            print(threshold())
+            threshold()
+
+    elif choice==5:
+
+            sorting()
+
+    elif choice==6:
+         
+        Stat_data(li)
+
+    elif choice==7:
+            exit()
+            break
+    
+    else:
+        print("Invalid !")
+        break

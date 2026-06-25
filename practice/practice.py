@@ -785,15 +785,60 @@
 #         print(f"{key} is {value} times in array")
 
 
-num=[51,52,2,1,6,56]
+# num=[51,52,2,1,6,56]
 
-n=list(filter(lambda i :i>23,num))
+# n=list(filter(lambda i :i>23,num))
 
-print(num)
-print(n)
+# print(num)
+# print(n)
+
+
+li=[]
+
+def data():
+    li=list([int(i) for i in input("Enter the number sep by spaces : ").split(" ")])
+    print(li)
+    return li
+
+
+li=data()
+# def summary(li):
+    
+#     print(f"""Data Summary : 
+#     -Toatal Elements : {len(li)}
+#     -Minimum value : {min(li)}  
+#     -Maximum value : {max(li)}  
+#     -Sum of all value : {sum(li)}
+#     -Average value : {sum(li)/len(li)}""")
+
+
+# summary(li)
+
+
+def factorial(n):
+    
+    if n==1:
+        return 1
+    return n*factorial(n-1)
+
+n=int(input("Enter the number to calculate factorial => "))
+
+print(factorial(n))
 
 
 
+        # Threshold 
+
+def threshold():
+
+    val=int(input("Enter the value to filter out data => : "))
+            
+    filter_from=list(filter(lambda x : x>=val,li ))
+
+    print(filter_from)     
+
+
+threshold()      
 
 
 

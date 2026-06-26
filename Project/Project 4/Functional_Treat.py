@@ -21,6 +21,8 @@ def summary(li):
     -Maximum value : {max(li)}  
     -Sum of all value : {sum(li)}
     -Average value : {sum(li)/len(li)}""")
+    
+
 
 
     # Factorial (Recursion)
@@ -65,16 +67,16 @@ Enter 2 to Descending order''')
         # Stat dataset
 
 def Stat_data(li):
-                 
+            
+            total=sum(li)
+            Maximum=max(li)
+            Minimum=min(li)
+            Avreage=sum(li)/len(li)
+            
+            return total,Maximum,Minimum,Avreage
 
-    print(f"""Dataset Statistic:
-           
-    -Minimum value : {min(li)}  
-    -Maximum value : {max(li)}  
-    -Sum of all value : {sum(li)}
-    -Average value : {sum(li)/len(li)}
-    """)
 
+    
 def exit():
     print("Thank you for visting Data Analyzer and Transformer Program !")
         
@@ -117,8 +119,9 @@ while True:
             sorting()
 
     elif choice==6:
-         
-        Stat_data(li)
+            display_data=Stat_data(li)
+            print(display_data)
+    
 
     elif choice==7:
             exit()

@@ -793,15 +793,15 @@
 # print(n)
 
 
-li=[]
+# li=[]
 
-def data():
-    li=list([int(i) for i in input("Enter the number sep by spaces : ").split(" ")])
-    print(li)
-    return li
+# def data():
+#     li=list([int(i) for i in input("Enter the number sep by spaces : ").split(" ")])
+#     print(li)
+#     return li
 
 
-li=data()
+# li=data()
 # def summary(li):
     
 #     print(f"""Data Summary : 
@@ -815,30 +815,140 @@ li=data()
 # summary(li)
 
 
-def factorial(n):
+# def factorial(n):
     
-    if n==1:
-        return 1
-    return n*factorial(n-1)
+#     if n==1:
+#         return 1
+#     return n*factorial(n-1)
 
-n=int(input("Enter the number to calculate factorial => "))
+# n=int(input("Enter the number to calculate factorial => "))
 
-print(factorial(n))
+# print(factorial(n))
 
 
 
-        # Threshold 
+#         # Threshold 
 
-def threshold():
+# def threshold():
 
-    val=int(input("Enter the value to filter out data => : "))
+#     val=int(input("Enter the value to filter out data => : "))
             
-    filter_from=list(filter(lambda x : x>=val,li ))
+#     filter_from=list(filter(lambda x : x>=val,li ))
 
-    print(filter_from)     
-
-
-threshold()      
+#     print(filter_from)     
 
 
+# threshold()      
 
+# class Car:
+
+#     name="taTA"
+#     model=None
+
+
+
+# obj=Car()
+
+# obj.model=2020
+# obj.name="Ford"
+
+# print(obj.model)
+# print(obj.name)
+
+
+# class Floor:
+
+#     num=23
+#     bhk=4
+
+
+
+# obj2=Floor()
+
+# # print(obj2.bhk)
+# # print(obj2.num)
+
+
+
+# class Car:
+
+#     name=None
+#     model=None
+
+#     def setData(self):
+#         self.name=input("Enter the name :")
+#         self.model=int(input("Enter the model :"))
+
+#     def getData(self):
+
+#         print(f"Car name is {self.name} model is {self.model}")
+
+# obj = Car()
+# obj.setData()
+# obj.getData()
+
+
+
+# class Student:
+
+#     name="Alay"
+#     age=18
+#     city="Rajkot"
+
+
+#     def setData(self):
+        
+#         self.name=input("Enter the name : ")
+#         self.age=int(input("Enter the age : "))
+#         self.city=input("Enter the city : ")
+
+
+#     def getDAta(self):
+
+#         print(f"my name is {self.name} and my age is {self.age} i am from {self.city}")
+
+        
+
+
+
+
+
+# obj=Student()
+# obj.age
+# obj.city
+# obj.name
+
+
+# print(obj.age)
+# print(obj.name)
+# print(obj.city)
+# obj.setData
+# obj.getDAta()
+
+
+class Car:
+
+    name="Tata"
+    model=None
+    Type=None
+
+    def setData(self):
+
+        name=input("Enter the your Car name :")
+        self.model=input("Enter the your car model  :")
+        self.Type=input("Enter the your car type :")
+        
+        if name.strip() != "":
+            self.name=name
+
+
+    
+    def getData(self):
+
+        print(F"my car company is {self.name}||My car model is {self.model}||My car type is {self.Type}")
+
+
+
+obj = Car()
+obj.setData()
+obj.getData()            

@@ -926,29 +926,75 @@
 # obj.getDAta()
 
 
-class Car:
+# class Car:
 
-    name="Tata"
-    model=None
-    Type=None
+#     def __init__(self,name,model,prize=1200000):
 
-    def setData(self):
+#         self.model=model
+#         self.name=name
+#         self.prize=prize
 
-        name=input("Enter the your Car name :")
-        self.model=input("Enter the your car model  :")
-        self.Type=input("Enter the your car type :")
+#     # def setData(self):
+
+#     #     name=input("Enter the your Car name :")
+#     #     self.model=input("Enter the your car model  :")
+#     #     self.Type=input("Enter the your car type :")
         
-        if name.strip() != "":
-            self.name=name
+#     #     if name.strip() != "":
+#     #         self.name=name
 
 
     
-    def getData(self):
+#     def getData(self):
 
-        print(F"my car company is {self.name}||My car model is {self.model}||My car type is {self.Type}")
+#         print(F"my car company is {self.name}||My car model is {self.model}||My car prize is {self.prize}")
 
 
 
-obj = Car()
-obj.setData()
-obj.getData()            
+#     def __del__(self):
+        
+#         print("Task is over !")
+
+
+
+# obj = Car("tata","punch")
+# # obj.setData()
+# obj.getData()            
+
+# class Student():
+
+#     def __init__(self,name,id,city,hight):
+#         self.__name=name
+#         self.id=id
+#         self.city=city
+#         self.hight=hight
+
+
+#     def getINfo(self):
+#         print(f"Student name is {self.__name} | student Id is {self.id} | student is from {self.city}  |  student hight is {self.hight}")
+
+
+
+#     def __del__(self):
+#         print("TAsk is over !")
+
+
+# obj = Student("alay",12533,"rajkot",5.9)     
+# obj.getINfo()  
+
+
+
+class 
+
+
+
+
+
+
+
+
+
+
+
+
+        

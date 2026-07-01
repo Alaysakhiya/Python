@@ -1101,3 +1101,44 @@
 # obj.C()
 # obj.B()
 # obj.A()
+
+
+# class parent():
+
+#     def __init__(self,name):
+#         print("This is ",name)
+
+# class child(parent):
+
+#     def __init__(self,name,age):
+#         super().__init__(name)
+#         print(f"This is your age {age}")
+
+
+# obj=parent("alay")
+# # obj.__init__("ALay")
+
+
+
+class Parent():
+
+    def __init__(self,name,age,city):
+        self.name=name
+        self.age=age
+        self.city=city
+
+
+class Child(Parent):
+
+        def __init__(self,name,age,city,state):
+            super().__init__(name,age,city)
+            self.state=state
+
+        def getInfo(self):
+            print(f"""\nMy name is {self.name}||
+My current Age is {self.age}||
+I am living at {self.city}||
+My city is at {self.state}""")    
+            
+obj=Child("Alay",18,"RAjkot","Gujarat")
+obj.getInfo()

@@ -966,7 +966,7 @@
 #     def __init__(self,name,id,city,hight):
 #         self.__name=name
 #         self.id=id
-#         self.city=city
+#         self.city=citypate
 #         self.hight=hight
 
 
@@ -984,17 +984,120 @@
 
 
 
-class 
+# class parent():
+
+#     def greet(self):
+#             print("This is from Parent ")
+
+
+# class child(parent):
+#     def greet2(self):
+#          print("this is from child ")
+     
+
+
+# obj=child()
+# obj.greet()
+# obj.greet2()
+
+
+# class institut():
+
+#     def greet(self):
+#         print("This is REd and White ")
+
+
+# class student():
+
+#     def fees(self):
+#         print(130000)
+    
+
+# class student2(institut,student):
+#     pass
 
 
 
+# obj=student2()
+# obj.greet()
+# obj.fees()
+
+
+# class father():
+#     print("I am father of alay")
+
+# class mother():
+#     print("I am mother of alay")
+
+# class Alay(mother,father):
+#     print("My name is alay")
+
+# obj=Alay()
+
+
+# class father():
+#     def name(self):
+#         print("i am the father")
+
+# class mother(father):
+#     def name2(self):
+#         print("i am the mother ")
+
+# class child(mother):
+#     pass
+
+# obj=child()
+# obj.name()    
+# obj.name2()    
+
+
+# class Car():
+
+#     def name(self):
+#         print("Comnpany name is Tata")
+
+# class first(Car):
+
+#     def modul(self):
+#         print("This model name is Punch")
+
+# class second(Car):
+#     def modul2(self):
+#         print("This model name is Harrier")
+
+    
+
+# obj=first()
+# obj.name()
+# obj.modul()
+
+
+# obj2=second()
+# obj2.name()
+# obj2.modul2()
+
+
+# class A():
+#     def A(self):
+#         print("THis is A")
+
+# class B(A):
+#     def B(self):
+#         print("THis is B")
+
+# class C(A):
+#     def C(self):
+#         print("THis is c")
+
+
+# class D(B,C):
+#     def D(self):
+#         print("this is D")
 
 
 
-
-
-
-
-
-
-        
+# obj=D()
+# obj.D()
+# obj.C()
+# obj.B()
+# obj.A()

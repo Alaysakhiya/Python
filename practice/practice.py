@@ -1120,25 +1120,109 @@
 
 
 
-class Parent():
+# class Parent():
 
-    def __init__(self,name,age,city):
-        self.name=name
-        self.age=age
-        self.city=city
+#     def __init__(self,name,age,city):
+#         self.name=name
+#         self.age=age
+#         self.city=city
 
 
-class Child(Parent):
+# class Child(Parent):
 
-        def __init__(self,name,age,city,state):
-            super().__init__(name,age,city)
-            self.state=state
+#         def __init__(self,name,age,city,state):
+#             super().__init__(name,age,city)
+#             self.state=state
 
-        def getInfo(self):
-            print(f"""\nMy name is {self.name}||
-My current Age is {self.age}||
-I am living at {self.city}||
-My city is at {self.state}""")    
+#         def getInfo(self):
+#             print(f"""\nMy name is {self.name}||
+# My current Age is {self.age}||
+# I am living at {self.city}||
+# My city is at {self.state}""")    
             
-obj=Child("Alay",18,"RAjkot","Gujarat")
-obj.getInfo()
+# obj=Child("Alay",18,"RAjkot","Gujarat")
+# obj.getInfo()
+
+
+class Employee():
+
+    def __init__(self,name,age,salary,emID):
+
+        self.__name=name
+        self.__age=age
+        self.__salary=salary
+        self.emID=emID
+
+    def showInfo(self):
+
+        print(F"Employee name is {self.__name} | Age is {self.__age} | Salary is {self.__salary} | Employee ID is {self.emID}")
+
+    def __del__(self):
+        pass
+
+
+class Manager(Employee):
+
+    def __init__(self,name,age,salary,emId,department):
+        super().__init__(name,age,salary,emId)
+
+        self.__department=department
+
+    def showInfo(self):
+            super().showInfo()
+            print(f"Manager Department is {self.__department}")
+
+    def __del__(self):
+        pass
+
+
+class Developar(Employee):
+    
+    def __init__(self,name,age,salary,emID,programming):
+        super().__init__(name,age,salary,emID)
+
+        self.__programming=programming
+
+    def showInfo(self):
+        super().showInfo()
+        print(F"Developar is in {self.__programming} Language")
+
+    def __del__(self):
+        pass
+
+
+em=[]
+man=[]
+dev=[]
+
+while True:
+
+    print('''Enter 1 to creat Employee
+Enter 2 to creat Manager 
+Enter 3 to creat Developer
+Enter 4 to View
+Enter 5 to delete
+Enter 6 to Exit
+        
+''')
+
+    choice=int(input("Enter the Choice : "))
+
+    if choice==1:
+
+        name=input("Enter the Emoloyee Name :> ")
+        age=int(input("Enter the Emoloyee Age:> "))
+        salary=int(input("Enter the Emoloyee Salary :> "))
+        emId=int(input("Enter the Employee Id :> "))
+
+        emobj=Employee(name,age,salary,emId)
+
+        em.append(emobj)
+
+        print("Employee is Created !")
+
+    elif choice==2:
+
+
+
+

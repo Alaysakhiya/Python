@@ -282,45 +282,45 @@
 #     if num==0:
 #         break
 
-# for i in range(0,10):
-#     print(i+1 ,"X",i+1,"=",(i+1)*(i+1))
+# for em in range(0,10):
+#     print(em+1 ,"X",em+1,"=",(em+1)*(em+1))
 
-# i=0
+# em=0
 
 
-# while i<51:
+# while em<51:
 
-#     i+=1
-#     if i%2==0:
-#         print(i,"Number is even")
+#     em+=1
+#     if em%2==0:
+#         print(em,"Number is even")
 #     # else:
-#     #     print(i,"Number is Odd")
+#     #     print(em,"Number is Odd")
     
 
-# for i in range (1,20):
-#     if i%2==0:
+# for em in range (1,20):
+#     if em%2==0:
 #         print()
 #     else:
-#         print(i,"number is Odd")
+#         print(em,"number is Odd")
 
 
-# for i in range(1,50):
-#     if i%2==0:
-#         print(i, "\nNumber is divided by 2")
-#     elif i%3==0:
-#         print(i ,"\nNumber is divided by 3")
+# for em in range(1,50):
+#     if em%2==0:
+#         print(em, "\nNumber is divided by 2")
+#     elif em%3==0:
+#         print(em ,"\nNumber is divided by 3")
 #     else:
-#         print(i ,"Number is divided by both")
+#         print(em ,"Number is divided by both")
 
 #         lab 2.4
 
 
 
 
-# for i in range(1,20):
-#     if i%4==0:
+# for em in range(1,20):
+#     if em%4==0:
 #         continue
-#     print(i)
+#     print(em)
 
 
 
@@ -344,17 +344,17 @@
 
 # tabel=int(input("\nEnter the tabel :"))
 
-# for i in range(tabel,tabel+1):
+# for em in range(tabel,tabel+1):
 #     for j in range(1,11):
-#         print(i,"X",j,"=",i*j)
+#         print(em,"X",j,"=",em*j)
 
-# for i in range(5,0,-1):
-#     for j in range(5,i-1,-1):
+# for em in range(5,0,-1):
+#     for j in range(5,em-1,-1):
 #         print(j,end=" " )
 #     print()
 
-# for i in range(5,0,-1):
-#     for j in range(i,6,):
+# for em in range(5,0,-1):
+#     for j in range(em,6,):
 #         print(j,end=" ")
 #     print()
 
@@ -388,17 +388,17 @@
 #     if opition==1:
 #         num=int(input('Enter the number to create the list : '))
 
-#         for i in range(num):
+#         for em in range(num):
 
-#             a=int(input(f"Enter the {i+1} => "))
+#             a=int(input(f"Enter the {em+1} => "))
 #             li.append(a)
 
 #         print("\nList is created !")
 
 #     elif opition==2:
 #         print()
-#         for i in li:
-#             print(i,end=" ")
+#         for em in li:
+#             print(em,end=" ")
 #         print()
 
 #     elif opition==3:
@@ -481,16 +481,16 @@
 
 
 
-# for i in std:
-#     print(i)
+# for em in std:
+#     print(em)
 
-#     avg=sum(i["score"])/len(std["score"]) a   
+#     avg=sum(em["score"])/len(std["score"]) a   
 # print(avg)
 
 
 
-# for i in student:
-#     print(f"name :",i["name"])
+# for em in student:
+#     print(f"name :",em["name"])
 # st={
 #     "id":len(student)+1,
 #     "name" : input("Enter the new name : "),
@@ -511,7 +511,7 @@
 
 # found=False
 
-# for i in student:
+# for em in student:
 #     if student[""]==id:
 #         student["score"]==up_score
 #         found=True
@@ -538,15 +538,15 @@
 # found=False
 
 
-# for i in student:
-#     if i["Name"]==name:
+# for em in student:
+#     if em["Name"]==name:
 #         found=True
-#         student.remove(i)
+#         student.remove(em)
 # #         print(student)
 # found=False
-# for i in student:
-#     if int(i ["score"])>=80:
-#         print(i["Name"])
+# for em in student:
+#     if int(em ["score"])>=80:
+#         print(em["Name"])
 #         found=True
 
 # student=[
@@ -561,26 +561,26 @@
 # Ccount=0
 # Fcount=0
 
-# for i in student:
-#     score=int(int(i["score"]))
+# for em in student:
+#     score=int(int(em["score"]))
 
 #     if score>=90:
-#         i[ "Grade"]='A'
+#         em[ "Grade"]='A'
 #         Acount+=1
 
 #     elif score>=80 and score<= 89:
-#         i["Grade"]='B'
+#         em["Grade"]='B'
 #         Bcount+=1
 
 #     elif score>=79:
-#         i["Grade"]='C'
+#         em["Grade"]='C'
 #         Ccount+=1
 
 #     else:
-#         i["Grade"]='F'
+#         em["Grade"]='F'
 #         Fcount+=1
 
-#     print(f"Name :{i["Name"]} | SCORE : {i["score"]} | Grade :{i["Grade"]} ")
+#     print(f"Name :{em["Name"]} | SCORE : {em["score"]} | Grade :{em["Grade"]} ")
 
 
 # print(f"{Acount} student get A grade")
@@ -754,15 +754,15 @@
 
 # num=int(input("Enter the number to add element of the array : "))
 
-# for i in range(num):
-#     ele=int(input(f"Enter the no.{i+1} element : "))
+# for em in range(num):
+#     ele=int(input(f"Enter the no.{em+1} element : "))
 #     arr.append(ele)
 
-# for i in arr:
-#     if i%2==0:
-#         print(i,"is Even")
+# for em in arr:
+#     if em%2==0:
+#         print(em,"is Even")
 #     else:
-#         print(i,"is Odd")
+#         print(em,"is Odd")
 
 # print(arr[::-1])
 
@@ -775,11 +775,11 @@
 # count=int(input("Enter the number to count => "))
 
 # frequency={}
-# for i in arr:
-#     if i in frequency:
-#                 frequency[i]+=1
+# for em in arr:
+#     if em in frequency:
+#                 frequency[em]+=1
 #     else:
-#                 frequency[i]=1
+#                 frequency[em]=1
 
 # for key,value in frequency.items():
 #         print(f"{key} is {value} times in array")
@@ -787,7 +787,7 @@
 
 # num=[51,52,2,1,6,56]
 
-# n=list(filter(lambda i :i>23,num))
+# n=list(filter(lambda em :em>23,num))
 
 # print(num)
 # print(n)
@@ -796,7 +796,7 @@
 # li=[]
 
 # def data():
-#     li=list([int(i) for i in input("Enter the number sep by spaces : ").split(" ")])
+#     li=list([int(em) for em in input("Enter the number sep by spaces : ").split(" ")])
 #     print(li)
 #     return li
 
@@ -905,7 +905,7 @@
 
 #     def getDAta(self):
 
-#         print(f"my name is {self.name} and my age is {self.age} i am from {self.city}")
+#         print(f"my name is {self.name} and my age is {self.age} em am from {self.city}")
 
         
 
@@ -1037,11 +1037,11 @@
 
 # class father():
 #     def name(self):
-#         print("i am the father")
+#         print("em am the father")
 
 # class mother(father):
 #     def name2(self):
-#         print("i am the mother ")
+#         print("em am the mother ")
 
 # class child(mother):
 #     pass
@@ -1191,13 +1191,14 @@ class Developar(Employee):
         pass
 
 
-em=[]
+emp=[]
 man=[]
 dev=[]
 
 while True:
 
-    print('''Enter 1 to creat Employee
+    print('''
+Enter 1 to creat Employee
 Enter 2 to creat Manager 
 Enter 3 to creat Developer
 Enter 4 to View
@@ -1217,12 +1218,95 @@ Enter 6 to Exit
 
         emobj=Employee(name,age,salary,emId)
 
-        em.append(emobj)
+        emp.append(emobj)
 
-        print("Employee is Created !")
+        print("\nEmployee is Created !")
 
     elif choice==2:
 
+        name=input("Enter the Manager Name => " )
+        age=int(input("Enter the Manager Age => " ))
+        salary=int(input("Enter the Manager Salary => " ))
+        emId=int(input("Enter the Manager EMID => " ))
+        department=input("Enter the Manager Department => ")
+
+        manobj=Manager(name,age,salary,emId,department)
+
+        man.append(manobj)
+        
+        print("\nManager is Created ! ")
 
 
+    elif choice==3:
+
+        name=input("Enter the Developer Name => " )
+        age=int(input("Enter the Developer Age => " ))
+        salary=int(input("Enter the Developer Salary => " ))
+        emId=int(input("Enter the Developer EMID => " ))
+        programming=input("Enter the Developer Programming Language => ")
+
+        devobj=Developar(name,age,salary,emId,programming)
+
+        dev.append(devobj)
+
+        print("\nDeveloper is Created ! ")
+
+
+    elif choice==4:
+        
+        subChoice=int(input("Enter 1/2/3 to view Emp/Man/Dev :> "))
+
+        if subChoice==1:
+            for em in emp:
+                em.showInfo()
+
+        elif subChoice==2:
+
+            for em in man:
+                em.showInfo()
+        elif subChoice==3:
+
+            for em in dev:
+                em.showInfo()
+
+        else:
+            print("\nInvalid choice !")
+
+
+    elif choice==5:
+        subCh=int(input("Enter 1/2/3 to view Emp/Man/Dev :> "))
+
+        if subCh==1:
+            empID=int(input("Enter the Emoloyee Id to Delete => "))
+
+            for i in emp:
+                if emp["emID"] ==empID:
+                    del i
+
+        
+        elif subCh==2:
+            manID=int(input("Enter the Manager Id to Delete => "))
+
+            for i in man:
+                if man["emID"] ==manID:
+                    del i
+
+        elif subCh==3:
+            devID=int(input("Enter the Emoloyee Id to Delete => "))
+
+            for i in dev:
+                if dev["emID"] ==devID:
+                    del i
+
+        else:
+            print("\nInvalid choice !")
+
+    elif choice==6:
+
+        print("\nYou suucessfully Exited thwe Programme")
+        break
+
+    else:
+        print("\nInvalid choice !")
+        break
 

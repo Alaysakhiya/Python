@@ -1280,8 +1280,8 @@ Enter 6 to Exit
             empID=int(input("Enter the Emoloyee Id to Delete => "))
 
             for i in emp:
-                if emp["emID"] ==empID:
-                    del i
+                if emp[3:] ==empID:
+                    emp.remove(i)
 
         
         elif subCh==2:

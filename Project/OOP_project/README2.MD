@@ -1,46 +1,48 @@
+
+
 <div align="center">
 
-# 🏢 Employee Management System
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Employee%20Management%20System&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&color=0:6a11cb,50:2575fc,100:00c6ff"/>
 
-### Python Object-Oriented Programming (OOP) Project
+<h1>
+🌈 Employee Management System
+</h1>
 
-<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=24&duration=3000&pause=1000&color=2F80ED&center=true&vCenter=true&width=700&lines=Employee+Management+System;Built+Using+Python+OOP;Inheritance+%7C+Encapsulation+%7C+Polymorphism" />
+<h3>
+✨ Python Object-Oriented Programming Project ✨
+</h3>
+
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=26&duration=2500&pause=1000&center=true&vCenter=true&width=800&color=00F7FF&multiline=true&height=80&lines=🚀+Python+OOP+Project;💼+Inheritance+•+Encapsulation+•+Polymorphism;🔥+Developed+by+Alay+Sakhiya"/>
 
 <br>
 
-<img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white">
-<img src="https://img.shields.io/badge/OOP-Inheritance-success?style=for-the-badge">
-<img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge">
-<img src="https://img.shields.io/badge/Made%20With-Python-yellow?style=for-the-badge&logo=python">
-<img src="https://img.shields.io/badge/Open%20Source-Yes-blueviolet?style=for-the-badge">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="130"/>
 
 <br><br>
 
-<img src="https://komarev.com/ghpvc/?username=Alaysakhiya&label=Repository+Views&color=0e75b6&style=for-the-badge">
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B">
+<img src="https://img.shields.io/badge/OOP-FF6B6B?style=for-the-badge">
+<img src="https://img.shields.io/badge/Inheritance-00C853?style=for-the-badge">
+<img src="https://img.shields.io/badge/Encapsulation-FF9800?style=for-the-badge">
+<img src="https://img.shields.io/badge/Polymorphism-9C27B0?style=for-the-badge">
+<img src="https://img.shields.io/badge/Status-Completed-00E676?style=for-the-badge">
+<img src="https://img.shields.io/badge/Open%20Source-❤-FF1744?style=for-the-badge">
 
 <br><br>
+
+<img src="https://komarev.com/ghpvc/?username=Alaysakhiya&repo=Python&label=Repository+Views&style=for-the-badge&color=blueviolet"/>
+
+<br><br>
+
+<a href="https://github.com/Alaysakhiya">
+<img src="https://img.shields.io/badge/GitHub_Profile-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
 
 <a href="https://github.com/Alaysakhiya/Python">
-<img src="https://img.shields.io/github/stars/Alaysakhiya/Python?style=for-the-badge">
+<img src="https://img.shields.io/badge/View_Repository-00C853?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
-
-<a href="https://github.com/Alaysakhiya/Python/fork">
-<img src="https://img.shields.io/github/forks/Alaysakhiya/Python?style=for-the-badge">
-</a>
-
-<a href="https://github.com/Alaysakhiya/Python/issues">
-<img src="https://img.shields.io/github/issues/Alaysakhiya/Python?style=for-the-badge">
-</a>
-
-<br><br>
-
-<img src="https://img.shields.io/github/last-commit/Alaysakhiya/Python?style=for-the-badge">
-<img src="https://img.shields.io/github/repo-size/Alaysakhiya/Python?style=for-the-badge">
-<img src="https://img.shields.io/github/languages/top/Alaysakhiya/Python?style=for-the-badge">
-<img src="https://img.shields.io/github/languages/count/Alaysakhiya/Python?style=for-the-badge">
 
 </div>
-
 ---
 
 # 📌 Overview

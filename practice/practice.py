@@ -1144,48 +1144,226 @@
 # obj.getInfo()
 
 
+# class Employee():
+
+#     def __init__(self,name,age,salary,emID):
+
+#         self.__name=name
+#         self.__age=age
+#         self.__salary=salary
+#         self.emID=emID
+
+#     def showInfo(self):
+
+#         print(F"Employee name is {self.__name} | Age is {self.__age} | Salary is {self.__salary} | Employee ID is {self.emID}")
+
+#     def __del__(self):
+#         pass
+
+
+# class Manager(Employee):
+
+#     def __init__(self,name,age,salary,emId,department):
+#         super().__init__(name,age,salary,emId)
+
+#         self.__department=department
+
+#     def showInfo(self):
+#             super().showInfo()
+#             print(f"Manager Department is {self.__department}")
+
+#     def __del__(self):
+#         pass
+
+
+# class Developar(Employee):
+    
+#     def __init__(self,name,age,salary,emID,programming):
+#         super().__init__(name,age,salary,emID)
+
+#         self.__programming=programming
+
+#     def showInfo(self):
+#         super().showInfo()
+#         print(F"Developar is in {self.__programming} Language")
+
+#     def __del__(self):
+#         pass
+
+
+# emp=[]
+# man=[]
+# dev=[]
+
+# while True:
+
+#     print('''
+# Enter 1 to creat Employee
+# Enter 2 to creat Manager 
+# Enter 3 to creat Developer
+# Enter 4 to View
+# Enter 5 to delete
+# Enter 6 to Exit
+        
+# ''')
+
+#     choice=int(input("Enter the Choice : "))
+
+#     if choice==1:
+
+#         name=input("Enter the Emoloyee Name :> ")
+#         age=int(input("Enter the Emoloyee Age:> "))
+#         salary=int(input("Enter the Emoloyee Salary :> "))
+#         emId=int(input("Enter the Employee Id :> "))
+
+#         emobj=Employee(name,age,salary,emId)
+
+#         emp.append(emobj)
+
+#         print("\nEmployee is Created !")
+
+#     elif choice==2:
+
+#         name=input("Enter the Manager Name => " )
+#         age=int(input("Enter the Manager Age => " ))
+#         salary=int(input("Enter the Manager Salary => " ))
+#         emId=int(input("Enter the Manager EMID => " ))
+#         department=input("Enter the Manager Department => ")
+
+#         manobj=Manager(name,age,salary,emId,department)
+
+#         man.append(manobj)
+        
+#         print("\nManager is Created ! ")
+
+
+#     elif choice==3:
+
+#         name=input("Enter the Developer Name => " )
+#         age=int(input("Enter the Developer Age => " ))
+#         salary=int(input("Enter the Developer Salary => " ))
+#         emId=int(input("Enter the Developer EMID => " ))
+#         programming=input("Enter the Developer Programming Language => ")
+
+#         devobj=Developar(name,age,salary,emId,programming)
+
+#         dev.append(devobj)
+
+#         print("\nDeveloper is Created ! ")
+
+
+#     elif choice==4:
+        
+#         subChoice=int(input("Enter 1/2/3 to view Emp/Man/Dev :> "))
+
+#         if subChoice==1:
+#             for em in emp:
+#                 em.showInfo()
+
+#         elif subChoice==2:
+
+#             for em in man:
+#                 em.showInfo()
+#         elif subChoice==3:
+
+#             for em in dev:
+#                 em.showInfo()
+
+#         else:
+#             print("\nInvalid choice !")
+
+
+#     elif choice==5:
+#         subCh=int(input("Enter 1/2/3 to view Emp/Man/Dev :> "))
+
+#         if subCh==1:
+#             empID=int(input("Enter the Emoloyee Id to Delete => "))
+
+#             for i in emp:
+#                 if emp[3:] ==empID:
+#                     emp.remove(i)
+
+        
+#         elif subCh==2:
+#             manID=int(input("Enter the Manager Id to Delete => "))
+
+#             for i in man:
+#                 if man["emID"] ==manID:
+#                     del i
+
+#         elif subCh==3:
+#             devID=int(input("Enter the Emoloyee Id to Delete => "))
+
+#             for i in dev:
+#                 if dev["emID"] ==devID:
+#                     del i
+
+#         else:
+#             print("\nInvalid choice !")
+
+#     elif choice==6:
+
+#         print("\nYou suucessfully Exited thwe Programme")
+#         break
+
+#     else:
+#         print("\nInvalid choice !")
+#         break
+
+
 class Employee():
 
-    def __init__(self,name,age,salary,emID):
+    id=100
+    def __init__(self,employee_name,employee_age,employee_salary):
+        self.employee_name=employee_name
+        self.employee_age=employee_age
+        self.__employee_salary=employee_salary  
+        self.__employee_id=Employee.id
 
-        self.__name=name
-        self.__age=age
-        self.__salary=salary
-        self.emID=emID
+        Employee.id+=1
 
-    def showInfo(self):
 
-        print(F"Employee name is {self.__name} | Age is {self.__age} | Salary is {self.__salary} | Employee ID is {self.emID}")
+    def get_employee(self):
+        return self.__employee_id
+    
+    def display_(self):
+
+        if type(self).__name__ =="Employee":
+            print(F"Employee ID : {self.__employee_id} || Employee Name : {self.employee_name} || Employee Age : {self.employee_age} || Employee salary : {self.__employee_salary}  ")
+
+        elif type(self).__name__=="Manager": 
+            print(F"Manager ID : {self.__employee_id} || Manager Name : {self.employee_name} || Manager Age : {self.employee_age} || Manager salary : {self.__employee_salary}  ")
+
+        else:
+            print(F"Developer ID : {self.__employee_id} || Developer Name : {self.employee_name} || Developer Age : {self.employee_age} || Developer salary : {self.__employee_salary}  ")
 
     def __del__(self):
         pass
-
 
 class Manager(Employee):
 
-    def __init__(self,name,age,salary,emId,department):
-        super().__init__(name,age,salary,emId)
+    def __init__(self, employee_name, employee_age, employee_salary, Department):
+        super().__init__(employee_name, employee_age, employee_salary)
+        self.__department=Department
 
-        self.__department=department
 
-    def showInfo(self):
-            super().showInfo()
-            print(f"Manager Department is {self.__department}")
+    def display_(self):
+        super().display_()
+        print(f"Manager Department : {self.__department}")
 
     def __del__(self):
         pass
 
+class Developer(Employee):
 
-class Developar(Employee):
-    
-    def __init__(self,name,age,salary,emID,programming):
-        super().__init__(name,age,salary,emID)
+    def __init__(self, employee_name, employee_age, employee_salary, Pro_language):
+        super().__init__(employee_name, employee_age, employee_salary)
+        self.__Programming_language=Pro_language
 
-        self.__programming=programming
 
-    def showInfo(self):
-        super().showInfo()
-        print(F"Developar is in {self.__programming} Language")
+    def display_(self):
+        super().display_()
+        print(f"Developer Programming Language : {self.__Programming_language}")
 
     def __del__(self):
         pass
@@ -1195,118 +1373,89 @@ emp=[]
 man=[]
 dev=[]
 
+print("----Python OOP Project: Employee Management System----")
+    
 while True:
-
-    print('''
-Enter 1 to creat Employee
-Enter 2 to creat Manager 
-Enter 3 to creat Developer
-Enter 4 to View
-Enter 5 to delete
-Enter 6 to Exit
-        
-''')
-
-    choice=int(input("Enter the Choice : "))
+    
+    print("""
+          ---Select an operation---
+1. To Create Employee
+2. To Create Manager
+3. To Create Developer
+4. To View
+0. To Exit
+          """)
+    
+    choice=int(input("Enter the Operation :> "))
 
     if choice==1:
 
-        name=input("Enter the Emoloyee Name :> ")
-        age=int(input("Enter the Emoloyee Age:> "))
-        salary=int(input("Enter the Emoloyee Salary :> "))
-        emId=int(input("Enter the Employee Id :> "))
+        employee_name=input("Enter the Employee Name : ")
+        employee_age=int(input("Enter the Age of the Employee : "))
+        employee_salary=int(input("Enter the Salary of the Employee : "))
 
-        emobj=Employee(name,age,salary,emId)
 
-        emp.append(emobj)
+        empobj=Employee(employee_name,employee_age,employee_salary)
+
+        emp.append(empobj)
 
         print("\nEmployee is Created !")
 
+
     elif choice==2:
 
-        name=input("Enter the Manager Name => " )
-        age=int(input("Enter the Manager Age => " ))
-        salary=int(input("Enter the Manager Salary => " ))
-        emId=int(input("Enter the Manager EMID => " ))
-        department=input("Enter the Manager Department => ")
+        manager_name=input("Enter the Manager Name : ")
+        manager_age=int(input("Enter the Age of the Manager : "))
+        manager_salary=int(input("Enter the Salary of the Manager : "))
+        manager_department=input("Enter the Department of Manager : ")
 
-        manobj=Manager(name,age,salary,emId,department)
+
+        manobj=Manager(manager_name,manager_age,manager_salary,manager_department)
 
         man.append(manobj)
-        
-        print("\nManager is Created ! ")
 
+        print("\nManager is Created !")
 
     elif choice==3:
 
-        name=input("Enter the Developer Name => " )
-        age=int(input("Enter the Developer Age => " ))
-        salary=int(input("Enter the Developer Salary => " ))
-        emId=int(input("Enter the Developer EMID => " ))
-        programming=input("Enter the Developer Programming Language => ")
+        developer_name=input("Enter the Developer Name : ")
+        developer_age=int(input("Enter the Age of the Developer : "))
+        developer_salary=int(input("Enter the Salary of the Developer : "))
+        developer_Language=input("Enter the Programming Language of Developer : ")
 
-        devobj=Developar(name,age,salary,emId,programming)
+
+        devobj=Developer(developer_name,developer_age,developer_salary,developer_Language)
 
         dev.append(devobj)
 
-        print("\nDeveloper is Created ! ")
-
+        print("\nDeveloper is Created !")
 
     elif choice==4:
-        
-        subChoice=int(input("Enter 1/2/3 to view Emp/Man/Dev :> "))
 
-        if subChoice==1:
-            for em in emp:
-                em.showInfo()
+        subchoice=int(input("Enter 1/2/3 to View EMP/MAN/DEV :> "))
 
-        elif subChoice==2:
-
-            for em in man:
-                em.showInfo()
-        elif subChoice==3:
-
-            for em in dev:
-                em.showInfo()
-
-        else:
-            print("\nInvalid choice !")
-
-
-    elif choice==5:
-        subCh=int(input("Enter 1/2/3 to view Emp/Man/Dev :> "))
-
-        if subCh==1:
-            empID=int(input("Enter the Emoloyee Id to Delete => "))
+        if subchoice==1:
 
             for i in emp:
-                if emp[3:] ==empID:
-                    emp.remove(i)
+                i.display_()
 
-        
-        elif subCh==2:
-            manID=int(input("Enter the Manager Id to Delete => "))
+        elif subchoice==2:
 
             for i in man:
-                if man["emID"] ==manID:
-                    del i
+                i.display_()
 
-        elif subCh==3:
-            devID=int(input("Enter the Emoloyee Id to Delete => "))
+        elif subchoice==3:
 
             for i in dev:
-                if dev["emID"] ==devID:
-                    del i
-
+                i.display_()
         else:
-            print("\nInvalid choice !")
+            print("\nEnter Valid choice !")
 
-    elif choice==6:
 
-        print("\nYou suucessfully Exited thwe Programme")
+    elif choice==0:
+        print("\nProgram is Closed !")
         break
 
     else:
-        print("\nInvalid choice !")
+        print("\nInvalid Choice !")
         break
-

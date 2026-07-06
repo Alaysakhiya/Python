@@ -4,10 +4,6 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Employee%20Management%20System&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&color=0:6a11cb,50:2575fc,100:00c6ff"/>
 
-<h1>
- Employee Management System
-</h1>
-
 <h3>
 ✨ Python Object-Oriented Programming Project ✨
 </h3>

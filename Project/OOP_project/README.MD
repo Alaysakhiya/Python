@@ -55,26 +55,6 @@ This project is ideal for students learning Python and OOP fundamentals.
 | ⚙ Constructors       | `__init__()`                         |
 | 🗑 Destructors       | `__del__()`                          |
 
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-* Python **3.x** installed
-
-
-### Navigate to the Project
-
-```bash
-cd Employee-Management-System
-```
-
-### Run the Application
-
-```bash
-python employee_management.py
-```
 
 ---
 
@@ -136,12 +116,6 @@ Contributions are welcome!
 3. Commit your changes.
 4. Push to your branch.
 5. Open a Pull Request.
-
----
-
-## 📄 License
-
-This project is available under the **MIT License**.
 
 ---
 

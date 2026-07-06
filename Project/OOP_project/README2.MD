@@ -5,7 +5,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Employee%20Management%20System&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&color=0:6a11cb,50:2575fc,100:00c6ff"/>
 
 <h1>
-🌈 Employee Management System
+ Employee Management System
 </h1>
 
 <h3>
@@ -33,14 +33,6 @@
 <img src="https://komarev.com/ghpvc/?username=Alaysakhiya&repo=Python&label=Repository+Views&style=for-the-badge&color=blueviolet"/>
 
 <br><br>
-
-<a href="https://github.com/Alaysakhiya">
-<img src="https://img.shields.io/badge/GitHub_Profile-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-
-<a href="https://github.com/Alaysakhiya/Python">
-<img src="https://img.shields.io/badge/View_Repository-00C853?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
 
 </div>
 ---

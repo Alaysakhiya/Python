@@ -1311,151 +1311,86 @@
 #         break
 
 
-class Employee():
+# 
 
-    id=100
-    def __init__(self,employee_name,employee_age,employee_salary):
-        self.employee_name=employee_name
-        self.employee_age=employee_age
-        self.__employee_salary=employee_salary  
-        self.__employee_id=Employee.id
-
-        Employee.id+=1
+# a=int(input("Enter the num :> "))
+# b=int(input("Enter the num :> "))
+# c=int(input("Enter the num :> "))
+# d=int(input("Enter the num :> "))
 
 
-    def get_employee(self):
-        return self.__employee_id
-    
-    def display_(self):
 
-        if type(self).__name__ =="Employee":
-            print(F"Employee ID : {self.__employee_id} || Employee Name : {self.employee_name} || Employee Age : {self.employee_age} || Employee salary : {self.__employee_salary}  ")
+# if a>=b:
+#     if a>=c:
+#         if a>=d:
+#             print("A is larg")
+#         else:
+#             print("D is larg")
+#     else:
+#         if c>=d:
+#             print("C is larg")
+#         else:
+#             print("D is larg")
+# else:
+#     if b>=c:
+#         if b>=d:
+#             print("B is larg")
+#         else:
+#             print("D is larg")
+#     else:
+#         if c>=d:
+#             print("C is large")
+#         else:
+#             print("D is larg")
 
-        elif type(self).__name__=="Manager": 
-            print(F"Manager ID : {self.__employee_id} || Manager Name : {self.employee_name} || Manager Age : {self.employee_age} || Manager salary : {self.__employee_salary}  ")
+# from math import *
 
-        else:
-            print(F"Developer ID : {self.__employee_id} || Developer Name : {self.employee_name} || Developer Age : {self.employee_age} || Developer salary : {self.__employee_salary}  ")
+# angel = 40
 
-    def __del__(self):
-        pass
+# a_ra=radians(angel)
 
-class Manager(Employee):
+# sin_ = sin(a_ra)
+# cos_ = cos(a_ra)
+# print(a_ra)
 
-    def __init__(self, employee_name, employee_age, employee_salary, Department):
-        super().__init__(employee_name, employee_age, employee_salary)
-        self.__department=Department
-
-
-    def display_(self):
-        super().display_()
-        print(f"Manager Department : {self.__department}")
-
-    def __del__(self):
-        pass
-
-class Developer(Employee):
-
-    def __init__(self, employee_name, employee_age, employee_salary, Pro_language):
-        super().__init__(employee_name, employee_age, employee_salary)
-        self.__Programming_language=Pro_language
-
-
-    def display_(self):
-        super().display_()
-        print(f"Developer Programming Language : {self.__Programming_language}")
-
-    def __del__(self):
-        pass
+# print(sin_)
+# print(cos_)
 
 
-emp=[]
-man=[]
-dev=[]
+# print(sqrt(100))
+# print(pow(3,12))
+# # print(exp(1))
 
-print("----Python OOP Project: Employee Management System----")
-    
-while True:
-    
-    print("""
-          ---Select an operation---
-1. To Create Employee
-2. To Create Manager
-3. To Create Developer
-4. To View
-0. To Exit
-          """)
-    
-    choice=int(input("Enter the Operation :> "))
+# import datetime
 
-    if choice==1:
-
-        employee_name=input("Enter the Employee Name : ")
-        employee_age=int(input("Enter the Age of the Employee : "))
-        employee_salary=int(input("Enter the Salary of the Employee : "))
+# bod=datetime.date(2008,11,13)
+# print(bod.day)
+# print(bod.year)
+# print(bod.month)
 
 
-        empobj=Employee(employee_name,employee_age,employee_salary)
+# li=[]
 
-        emp.append(empobj)
+# for i in range(1,4):
+#     movie= input(f"Enter the {i} movie name :>")
+#     li.append(movie)
 
-        print("\nEmployee is Created !")
-
-
-    elif choice==2:
-
-        manager_name=input("Enter the Manager Name : ")
-        manager_age=int(input("Enter the Age of the Manager : "))
-        manager_salary=int(input("Enter the Salary of the Manager : "))
-        manager_department=input("Enter the Department of Manager : ")
+# print(li)
 
 
-        manobj=Manager(manager_name,manager_age,manager_salary,manager_department)
 
-        man.append(manobj)
+class Person :
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
 
-        print("\nManager is Created !")
-
-    elif choice==3:
-
-        developer_name=input("Enter the Developer Name : ")
-        developer_age=int(input("Enter the Age of the Developer : "))
-        developer_salary=int(input("Enter the Salary of the Developer : "))
-        developer_Language=input("Enter the Programming Language of Developer : ")
+    def displayData(self):
+        print(f"My name is {self.name} and my age is {self.age}")
 
 
-        devobj=Developer(developer_name,developer_age,developer_salary,developer_Language)
-
-        dev.append(devobj)
-
-        print("\nDeveloper is Created !")
-
-    elif choice==4:
-
-        subchoice=int(input("Enter 1/2/3 to View EMP/MAN/DEV :> "))
-
-        if subchoice==1:
-
-            for i in emp:
-                i.display_()
-
-        elif subchoice==2:
-
-            for i in man:
-                i.display_()
-
-        elif subchoice==3:
-
-            for i in dev:
-                i.display_()
-        else:
-            print("\nEnter Valid choice !")
-
-
-    elif choice==0:
-        print("\nProgram is Closed !")
-        break
-
-    else:
-        print("\nInvalid Choice !")
-        break
+p1= Person("Alay",18)
+p2=Person("avinash",20)
+p3=Person("Krish", 17)
+p1.displayData()
+p2.displayData()
+p3.displayData()

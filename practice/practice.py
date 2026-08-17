@@ -1379,18 +1379,37 @@
 
 
 
-class Person :
+# class Person :
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+
+#     def displayData(self):
+#         print(f"My name is {self.name} and my age is {self.age}")
+
+
+# p1= Person("Alay",18)
+# p2=Person("avinash",20)
+# p3=Person("Krish", 17)
+# p1.displayData()
+# p2.displayData()
+# p3.displayData()
+
+class Person:
+
     def __init__(self,name,age):
         self.name=name
         self.age=age
 
+class Student(Person):
+
+    def __init__(self,name,age,rollno):
+        super().__init__(name,age)
+        self.rollno=rollno
+
     def displayData(self):
-        print(f"My name is {self.name} and my age is {self.age}")
+        print(F"Name : {self.name} | Age : {self.age} | Roll No : {self.rollno}")
 
 
-p1= Person("Alay",18)
-p2=Person("avinash",20)
-p3=Person("Krish", 17)
-p1.displayData()
-p2.displayData()
-p3.displayData()
+stu= Student("Alay",32,101)
+stu.displayData()

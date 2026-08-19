@@ -49,15 +49,20 @@ class Account(ABC):
 
 
 class SavingAccount(Account):
-    pass
+
+    def __init__(self,account_number,account_holder,interest_rate,balance=0):
+        super().__init__(account_number,account_holder,balance)
+        self.interest_rate=interest_rate
+
+    def add_interest(self,balance):
+        super().__init__(balance)
+        interest = {(self.balance * self.interest_rate)/100} 
+        print({interest})
+
 
 class CurrentAccount(Account):
     pass
 
-
-# p1= Account(3210654,"Alay",90000)
-# p1.deposite(10000)
-# p1.withdraw(50000)
 
 
 # while True:

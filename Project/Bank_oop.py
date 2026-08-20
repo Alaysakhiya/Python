@@ -1,4 +1,5 @@
 from abc import ABC , abstractmethod
+from datetime import datetime
 
 class Person:
 
@@ -9,8 +10,6 @@ class Person:
 
 class Customer(Person):
 
-    Bank = "SBI"
-
     def __init__(self,name,age,address,customer_id):
         super.__init__(self,name,age,address)
         self.customer_id=customer_id
@@ -19,13 +18,13 @@ class Customer(Person):
 
 
 class Account(ABC):
-    total_account=0
+    __total_account=0
     def __init__(self,account_number,account_holder,balance=0):
         self.account_number=account_number
         self.account_holder=account_holder
         self.__balance=balance
-        Account.total_account+=1
-        Transaction = []
+        Account.__total_account+=1
+        self.Transaction = []
 
     @property
     def balance(self):
@@ -33,40 +32,89 @@ class Account(ABC):
 
     @balance.setter
     def balance(self,amount):
-        self.__balance += amount
+        self.__balance = amount
 
 
-    def deposite(self,Damount):
-        self.Damount = Damount
-        self.__balance += Damount
-        print(F"{self.balance}")
+    def deposite(self,amount):
+        if amount < 0:
+            print("Invalid Deposite amount !")
+        else:
+            self.balance+=amount
+            self.Transaction.append(F"{datetime} | Deposite | {amount}")
 
 
-    def withdraw(self,Withamount):
-        self.Wamount = Withamount
-        self.__balance -= Withamount
-        print(F"{self.balance}")
+    @abstractmethod
+    def withdraw(self,amount):
+        pass
 
 
 class SavingAccount(Account):
 
-    def __init__(self,account_number,account_holder,interest_rate,balance=0):
+    def __init__(self,account_number,account_holder,balance,interest_rate):
         super().__init__(account_number,account_holder,balance)
         self.interest_rate=interest_rate
 
-    def add_interest(self,balance):
-        super().__init__(balance)
-        interest = {(self.balance * self.interest_rate)/100} 
-        print({interest})
+    def add_interest(self):
+        interestamount = (self.balance * self.interest_rate) /100
+        self.balance += interestamount
+        self.Transaction.append(F"{datetime} | Interest | {interestamount}")
+
+#               deposite
+
+    def deposite(self, amount):
+        super().deposite(amount)
+        
+        
+#               withdraw
+
+    def withdraw(self,amount):
+        if self.balance < amount:
+            print("Invalid amount for withdraw ! ")
+        else:
+            self.balance -= amount
+            self.Transaction.append(F"{datetime} | Withdraw | {amount}")
+
 
 
 class CurrentAccount(Account):
-    pass
+
+    def __init__(self, account_number, account_holder, balance,overdraft_limit):
+        super().__init__(account_number, account_holder, balance)
+        self.overdraft_limit = overdraft_limit
+
+
+    def deposite(self, amount):
+        super().deposite(amount)
+        print(self.balance)
+
+    def withdraw(self, amount):
+        if self.balance >= amount:
+            self.balance -= amount
+            self.Transaction.append(F"{datetime} | Withdraw | {amount}")
+        else:
+            if amount > self.balance + self.overdraft_limit:
+                
+                self.Transaction.append(F"{datetime} | Withdraw | {amount}")
+            else:
+                print("Invalid amount for withdraw !")
+        print(self.balance)
+
+
+# p1 = SavingAccount(5464,"bdfb",10000,5)
+# p1.deposite(2000)
+p1 = CurrentAccount(6564646,"dgfd",10000,2000)
+p1.balance
+p1.deposite(2000)
+p1.withdraw(12000)
+print(p1.overdraft_limit)
+print(p1.Transaction)
+
+
+
 
 
 
 # while True:
-
 
 #     print("""====== Bank Management System ======
 # 1. Create New Account
@@ -95,4 +143,4 @@ class CurrentAccount(Account):
 #     elif choice == 7:
 #          pass
 #     elif choice == 8:
-#          pass
+#          pass""""

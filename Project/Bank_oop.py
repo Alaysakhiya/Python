@@ -40,12 +40,16 @@ class Account(ABC):
             print("Invalid Deposite amount !")
         else:
             self.balance+=amount
-            self.Transaction.append(F"{datetime} | Deposite | {amount}")
+            self.Transaction.append(F"{datetime.now()} | Deposite | {amount}")
 
 
     @abstractmethod
     def withdraw(self,amount):
         pass
+
+    @staticmethod
+    def get_no_account():
+        return Account.__total_account
 
 
 class SavingAccount(Account):
@@ -59,12 +63,6 @@ class SavingAccount(Account):
         self.balance += interestamount
         self.Transaction.append(F"{datetime} | Interest | {interestamount}")
 
-#               deposite
-
-    def deposite(self, amount):
-        super().deposite(amount)
-        
-        
 #               withdraw
 
     def withdraw(self,amount):
@@ -72,7 +70,10 @@ class SavingAccount(Account):
             print("Invalid amount for withdraw ! ")
         else:
             self.balance -= amount
-            self.Transaction.append(F"{datetime} | Withdraw | {amount}")
+            self.Transaction.append(F"{datetime.now()} | Withdraw | {amount}")
+
+    def account_type(self):
+        return "Saving"
 
 
 
@@ -83,33 +84,58 @@ class CurrentAccount(Account):
         self.overdraft_limit = overdraft_limit
 
 
-    def deposite(self, amount):
-        super().deposite(amount)
-        print(self.balance)
-
     def withdraw(self, amount):
         if self.balance >= amount:
             self.balance -= amount
-            self.Transaction.append(F"{datetime} | Withdraw | {amount}")
+            self.Transaction.append(F"{datetime.now()} | Withdraw | {amount}")
         else:
-            if amount > self.balance + self.overdraft_limit:
-                
-                self.Transaction.append(F"{datetime} | Withdraw | {amount}")
+            if self.balance + self.overdraft_limit > amount:
+                self.balance -= amount
+                self.overdraft_limit = self.overdraft_limit + self.balance
+                self.Transaction.append(F"{datetime.now()} | Withdraw | {amount}")
             else:
                 print("Invalid amount for withdraw !")
-        print(self.balance)
+        
+
+    def account_type(self):
+        return "Current"
 
 
-# p1 = SavingAccount(5464,"bdfb",10000,5)
-# p1.deposite(2000)
-p1 = CurrentAccount(6564646,"dgfd",10000,2000)
-p1.balance
-p1.deposite(2000)
-p1.withdraw(12000)
-print(p1.overdraft_limit)
-print(p1.Transaction)
 
 
+class Bank:
+
+    customer = []
+    accounts = []
+
+    def add_customer(self,customer):
+        self.customer.append(customer)
+
+    def add_account(self,account):
+        self.account.append(account)
+
+    def transfar(self):
+        pass
+
+    def count_no_account(self):
+        print(Account.get_no_account)
+
+    def __len__(self):
+        return len(self.customer)
+
+    def transfar(self,accountself,accountno,amount):
+        for i in self.accounts:
+            if accountself == i.get("account_number"):
+                if i.get("balance") >= amount:
+                    for j in self.accounts:
+                        j.__settime__("balance")
+
+
+bank1 = Bank()
+
+a1 = SavingAccount(12321116,"alay",10000,5)
+a2 = CurrentAccount(4946464,"avinash",20000,5000)
+a3 = SavingAccount(4846464,"krish",15000,5)
 
 
 

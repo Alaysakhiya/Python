@@ -11,10 +11,11 @@ class Person:
 class Customer(Person):
 
     def __init__(self,name,age,address,customer_id):
-        super.__init__(self,name,age,address)
+        super().__init__(name,age,address)
         self.customer_id=customer_id
 
 #       ABC
+Transaction = []
 
 
 class Account(ABC):
@@ -54,7 +55,7 @@ class Account(ABC):
 
 class SavingAccount(Account):
 
-    def __init__(self,account_number,account_holder,balance,interest_rate):
+    def __init__(self,account_number,account_holder,interest_rate,balance=0):
         super().__init__(account_number,account_holder,balance)
         self.interest_rate=interest_rate
 
@@ -79,7 +80,7 @@ class SavingAccount(Account):
 
 class CurrentAccount(Account):
 
-    def __init__(self, account_number, account_holder, balance,overdraft_limit):
+    def __init__(self, account_number, account_holder,overdraft_limit ,balance=0):
         super().__init__(account_number, account_holder, balance)
         self.overdraft_limit = overdraft_limit
 
@@ -127,11 +128,11 @@ class Bank:
                 if i.balance >= amount:
                     for j in self.accounts:
                         if acc_no == j.account_number:
-                            self.Transaction.append(F"{datetime.now()} | Get transfar Money | {amount}")
+                            Transaction.append(F"{datetime.now()} | Get transfar Money | {amount}")
                             j.balance += amount
                             break
                     i.balance -= amount
-                    self.Transaction.append(F"{datetime.now()} | Transfar Money | {amount}")
+                    Transaction.append(F"{datetime.now()} | Transfar Money | {amount}")
                     break
                 else:
                     print("Invalid !")
@@ -167,10 +168,44 @@ while True:
 7. View Total Accounts (classmethod)
 8. Exit""")
 
-    choice = int(input("Enter the choice : "))
+    choice = int(input("\nEnter the choice : "))
 
     if choice == 1:
-        pass
+        print("\n====Enter Your Details====\n")
+        cus_name=str(input("Enter your Name :> "))
+        cus_age = int(input("Enter the your Age :> "))
+        cus_addre = str(input("Enter your Address :>"))
+        cus_ID = int(input("Enter your Customer ID :> "))
+
+        cus_obj = Customer(cus_name,cus_age,cus_addre,cus_ID)
+        my_bank1.add_customer(cus_obj)
+
+        # Acc
+
+        print("\n1 > Saving Account \n2 > Current Account")
+
+        sub_choi = int(input("Enter your choice for Account Type :> "))
+
+
+        if sub_choi ==1:
+
+            interest = int(input("\nEnter your interest Rate :> "))
+
+
+            acc_obj = SavingAccount(cus_ID,cus_name,interest)
+            my_bank1.add_account(acc_obj)
+
+            print("\nYour Account is successfully Created !")
+
+        elif sub_choi == 2:
+
+            overd = int(input("Enter The limit of Overdraft :> "))
+
+            acc_obj1 = CurrentAccount(cus_ID,cus_name,overd)
+            my_bank1.add_account(acc_obj1)
+
+
+            
     elif choice == 2:
         pass
     elif choice == 3:
@@ -185,3 +220,4 @@ while True:
         pass
     elif choice == 8:
         pass
+

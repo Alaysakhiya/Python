@@ -112,10 +112,7 @@ class Bank:
         self.customer.append(customer)
 
     def add_account(self,account):
-        self.account.append(account)
-
-    def transfar(self):
-        pass
+        self.accounts.append(account)
 
     def count_no_account(self):
         print(Account.get_no_account)
@@ -123,50 +120,68 @@ class Bank:
     def __len__(self):
         return len(self.customer)
 
-    def transfar(self,accountself,accountno,amount):
+    def transfar(self,acc_self,acc_no,amount):
+
         for i in self.accounts:
-            if accountself == i.get("account_number"):
-                if i.get("balance") >= amount:
+            if acc_self == i.account_number:
+                if i.balance >= amount:
                     for j in self.accounts:
-                        j.__settime__("balance")
+                        if acc_no == j.account_number:
+                            self.Transaction.append(F"{datetime.now()} | Get transfar Money | {amount}")
+                            j.balance += amount
+                            break
+                    i.balance -= amount
+                    self.Transaction.append(F"{datetime.now()} | Transfar Money | {amount}")
+                    break
+                else:
+                    print("Invalid !")
 
 
-bank1 = Bank()
+
+my_bank1 = Bank()
 
 a1 = SavingAccount(12321116,"alay",10000,5)
 a2 = CurrentAccount(4946464,"avinash",20000,5000)
 a3 = SavingAccount(4846464,"krish",15000,5)
 
+my_bank1.add_account(a1)
+my_bank1.add_account(a2)
+my_bank1.add_account(a3)
+my_bank1.transfar(4946464,4846464,5000)
+print(a1.balance)
+print(a2.balance)
+print(a3.balance)
 
 
 
-# while True:
 
-#     print("""====== Bank Management System ======
-# 1. Create New Account
-# 2. Deposit Money
-# 3. Withdraw Money
-# 4. Transfer Money
-# 5. Check Balance
-# 6. Print Statement
-# 7. View Total Accounts (classmethod)
-# 8. Exit""")
+while True:
 
-#     choice = int(input("Enter the choice : "))
+    print("""====== Bank Management System ======
+1. Create New Account
+2. Deposit Money
+3. Withdraw Money
+4. Transfer Money
+5. Check Balance
+6. Print Statement
+7. View Total Accounts (classmethod)
+8. Exit""")
 
-#     if choice == 1:
-#         pass
-#     elif choice == 2:
-#         pass
-#     elif choice == 3:
-#         pass
-#     elif choice == 4:
-#          pass
-#     elif choice == 5:
-#          pass
-#     elif choice == 6:
-#          pass
-#     elif choice == 7:
-#          pass
-#     elif choice == 8:
-#          pass""""
+    choice = int(input("Enter the choice : "))
+
+    if choice == 1:
+        pass
+    elif choice == 2:
+        pass
+    elif choice == 3:
+        pass
+    elif choice == 4:
+        pass
+    elif choice == 5:
+        pass
+    elif choice == 6:
+        pass
+    elif choice == 7:
+        pass
+    elif choice == 8:
+        pass

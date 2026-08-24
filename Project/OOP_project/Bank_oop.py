@@ -36,10 +36,10 @@ class Account(ABC):
         self.__balance = amount
 
 
-    def deposite(self,amount):
+    def deposit(self,amount):
         if amount > 0:
             self.balance+=amount
-            self.Transaction.append(F"{datetime.now()} | Deposite | {amount}")
+            self.Transaction.append(F"{datetime.now()} | Deposit | {amount}")
         else: 
             print("Invalid Amount !")
 
@@ -58,12 +58,6 @@ class SavingAccount(Account):
         super().__init__(account_number,account_holder,balance)
         self.interest_rate=interest_rate
 
-    def deposite(self, amount):
-        if amount <= 0:
-            print("Invalid deposit amount!")
-            return
-        self.balance += amount
-        self.Transaction.append(F"{datetime.now()} | Deposit | {amount}")
 
     def add_interest(self):
         interestamount = (self.balance * self.interest_rate) /100
@@ -211,19 +205,21 @@ while True:
             my_bank1.add_account(acc_obj1)
 
             print("Your Account is successfully Created !")
+        else:
+            print("Invalid choice !")
 
 
             
     elif choice == 2:
         acc_no =int(input("\nEnter your Account Number :> "))
-        amount = int(input("Enter the amount for Deposite :> "))
+        amount = int(input("Enter the amount for Deposit :> "))
         account_found = False
 
         for i in my_bank1.accounts:
             if i.account_number == acc_no:
                 account_found = True
-                i.deposite(amount)
-                print("Amount successfully Deposite")
+                i.deposit(amount)
+                print("Amount successfully Deposit")
                 break 
         if account_found == False:
             print("Account Not found !")
@@ -272,7 +268,7 @@ while True:
                 account_found = True 
 
                 print(f"""==== Print Statement ====
-                Account Number : {i.account_number} || Account Type : {i.acoount_type} || Account Balance : {i.balance}""")
+                Account Number : {i.account_number} || Account Type : {i.acoount_type()} || Account Balance : {i.balance}""")
                 if len(i.Transaction) > 0:
                     for j in i.Transaction:
                         print(j)
@@ -290,4 +286,4 @@ while True:
         break
     else:
         print("\nInvalid Choice !")
-        break
+        

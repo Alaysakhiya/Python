@@ -122,18 +122,18 @@ class Bank:
     def __len__(self):
         return len(self.customer)
 
-    def transfar(self,acc_self,acc_no,amount):
+    def transfer(self,acc_self,acc_no,amount):
 
         for i in self.accounts:
             if acc_self == i.account_number:
                 if i.balance >= amount:
                     for j in self.accounts:
                         if acc_no == j.account_number:
-                            i.Transaction.append(F"{datetime.now()} | Transfar Recive | {amount}")
+                            i.Transaction.append(F"{datetime.now()} | Transfer Recive | {amount}")
                             j.balance += amount
                             break
                     i.balance -= amount
-                    i.Transaction.append(F"{datetime.now()} | Transfar Sent | {amount}")
+                    i.Transaction.append(F"{datetime.now()} | Transfer Sent | {amount}")
                     break
                 else:
                     print("Invalid !")
@@ -242,10 +242,10 @@ while True:
     elif choice == 4:
         acc_self =int(input("\nEnter your Account Number :> "))
         acc_no = int(input("Enter the Other Account Number :> "))
-        amount = int(input("Enter the amount for Transfar :> "))
+        amount = int(input("Enter the amount for Transfer :> "))
 
-        my_bank1.transfar(acc_self,acc_no,amount)
-        print("Money Transfar is Completed !")
+        my_bank1.transfer(acc_self,acc_no,amount)
+        print("Money Transfer is Completed !")
 
     elif choice == 5:
         acc_no =int(input("\nEnter your Account Number :> "))
@@ -268,7 +268,7 @@ while True:
                 account_found = True 
 
                 print(f"""==== Print Statement ====
-                Account Number : {i.account_number} || Account Type : {i.acoount_type()} || Account Balance : {i.balance}""")
+                Account Number : {i.account_number} || Account Type : {i.account_type()} || Account Balance : {i.balance}""")
                 if len(i.Transaction) > 0:
                     for j in i.Transaction:
                         print(j)

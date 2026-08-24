@@ -190,24 +190,35 @@ while True:
         if sub_choi ==1:
 
             interest = int(input("\nEnter your interest Rate :> "))
+            balance = int(input("Enter your Balance :> "))
+            sav_acc = int(input("Enter your Account Number :> "))
 
-
-            acc_obj = SavingAccount(cus_ID,cus_name,interest)
+            acc_obj = SavingAccount(sav_acc,cus_name,interest,balance)
             my_bank1.add_account(acc_obj)
 
             print("\nYour Account is successfully Created !")
 
         elif sub_choi == 2:
 
-            overd = int(input("Enter The limit of Overdraft :> "))
+            overd = int(input("\nEnter The limit of Overdraft :> "))
+            balance = int(input("Enter your Balance :> "))
+            cur_acc = int(input("Enter your Account Number :> "))
 
-            acc_obj1 = CurrentAccount(cus_ID,cus_name,overd)
+            acc_obj1 = CurrentAccount(cur_acc,cus_name,overd,balance)
             my_bank1.add_account(acc_obj1)
+
+            print("Your Account is successfully Created !")
 
 
             
     elif choice == 2:
-        pass
+        acc_no =int(input("\nEnter your Account Number :> "))
+        amount = int(input("Enter the amount for Deposite :> "))
+
+        for i in my_bank1.accounts:
+            if acc_no == i.account_number:
+                i.deposite(amount)
+
     elif choice == 3:
         pass
     elif choice == 4:

@@ -92,7 +92,8 @@ class CurrentAccount(Account):
         else:
             if self.balance + self.overdraft_limit > amount:
                 self.balance -= amount
-                self.overdraft_limit = self.overdraft_limit + self.balance
+                overdraft_use = amount - self.balance
+                self.overdraft_limit -= overdraft_use
                 self.Transaction.append(F"{datetime.now()} | Withdraw | {amount}")
             else:
                 print("Invalid amount for withdraw !")

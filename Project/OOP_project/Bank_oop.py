@@ -15,7 +15,7 @@ class Customer(Person):
         self.customer_id=customer_id
 
 #       ABC
-Transaction = []
+
 
 
 class Account(ABC):
@@ -37,12 +37,11 @@ class Account(ABC):
 
 
     def deposite(self,amount):
-        if amount < 0:
-            print("Invalid Deposite amount !")
-        else:
+        if amount > 0:
             self.balance+=amount
             self.Transaction.append(F"{datetime.now()} | Deposite | {amount}")
-
+        else: 
+            print("Invalid Amount !")
 
     @abstractmethod
     def withdraw(self,amount):
@@ -59,10 +58,17 @@ class SavingAccount(Account):
         super().__init__(account_number,account_holder,balance)
         self.interest_rate=interest_rate
 
+    def deposite(self, amount):
+        if amount <= 0:
+            print("Invalid deposit amount!")
+            return
+        self.balance += amount
+        self.Transaction.append(F"{datetime.now()} | Deposit | {amount}")
+
     def add_interest(self):
         interestamount = (self.balance * self.interest_rate) /100
         self.balance += interestamount
-        self.Transaction.append(F"{datetime} | Interest | {interestamount}")
+        self.Transaction.append(F"{datetime.now()} | Interest | {interestamount}")
 
 #               withdraw
 
@@ -106,8 +112,9 @@ class CurrentAccount(Account):
 
 class Bank:
 
-    customer = []
-    accounts = []
+    def __init__(self):
+        self.customer = []
+        self.accounts = []
 
     def add_customer(self,customer):
         self.customer.append(customer)
@@ -116,7 +123,7 @@ class Bank:
         self.accounts.append(account)
 
     def count_no_account(self):
-        print(Account.get_no_account)
+        print(Account.get_no_account())
 
     def __len__(self):
         return len(self.customer)
@@ -128,11 +135,11 @@ class Bank:
                 if i.balance >= amount:
                     for j in self.accounts:
                         if acc_no == j.account_number:
-                            Transaction.append(F"{datetime.now()} | Get transfar Money | {amount}")
+                            i.Transaction.append(F"{datetime.now()} | Transfar Recive | {amount}")
                             j.balance += amount
                             break
                     i.balance -= amount
-                    Transaction.append(F"{datetime.now()} | Transfar Money | {amount}")
+                    i.Transaction.append(F"{datetime.now()} | Transfar Sent | {amount}")
                     break
                 else:
                     print("Invalid !")
@@ -141,17 +148,13 @@ class Bank:
 
 my_bank1 = Bank()
 
-a1 = SavingAccount(12321116,"alay",10000,5)
-a2 = CurrentAccount(4946464,"avinash",20000,5000)
-a3 = SavingAccount(4846464,"krish",15000,5)
+a1 = SavingAccount(12321116,"alay",5,10000)
+a2 = CurrentAccount(4946464,"avinash",5000,20000)
+a3 = SavingAccount(4846464,"krish",5,15000)
 
 my_bank1.add_account(a1)
 my_bank1.add_account(a2)
 my_bank1.add_account(a3)
-my_bank1.transfar(4946464,4846464,5000)
-print(a1.balance)
-print(a2.balance)
-print(a3.balance)
 
 
 
@@ -214,21 +217,77 @@ while True:
     elif choice == 2:
         acc_no =int(input("\nEnter your Account Number :> "))
         amount = int(input("Enter the amount for Deposite :> "))
+        account_found = False
 
         for i in my_bank1.accounts:
-            if acc_no == i.account_number:
+            if i.account_number == acc_no:
+                account_found = True
                 i.deposite(amount)
+                print("Amount successfully Deposite")
+                break 
+        if account_found == False:
+            print("Account Not found !")
 
     elif choice == 3:
-        pass
-    elif choice == 4:
-        pass
-    elif choice == 5:
-        pass
-    elif choice == 6:
-        pass
-    elif choice == 7:
-        pass
-    elif choice == 8:
-        pass
+        acc_no =int(input("\nEnter your Account Number :> "))
+        amount = int(input("Enter the amount for Withdraw :> "))
+        account_found= False
 
+        for i in my_bank1.accounts:
+            if i.account_number == acc_no:
+                account_found = True
+                i.withdraw(amount)
+                print("Amount successfully Withdraw") 
+                break
+
+        if account_found==False:
+            print("Account Not found !")
+        
+    elif choice == 4:
+        acc_self =int(input("\nEnter your Account Number :> "))
+        acc_no = int(input("Enter the Other Account Number :> "))
+        amount = int(input("Enter the amount for Transfar :> "))
+
+        my_bank1.transfar(acc_self,acc_no,amount)
+        print("Money Transfar is Completed !")
+
+    elif choice == 5:
+        acc_no =int(input("\nEnter your Account Number :> "))
+        account_found = False
+        
+        for i in my_bank1.accounts:
+            if i.account_number == acc_no:
+                account_found = True
+                print(f"{i.account_holder} your balance is {i.balance}")
+                break
+
+        if account_found == False:
+            print("Account is not found !")
+        
+    elif choice == 6:
+        acc_no =int(input("\nEnter Account Number :> "))
+        account_found = False
+        for i in my_bank1.accounts:
+            if i.account_number == acc_no:
+                account_found = True 
+
+                print(f"""==== Print Statement ====
+                Account Number : {i.account_number} || Account Type : {i.acoount_type} || Account Balance : {i.balance}""")
+                if len(i.Transaction) > 0:
+                    for j in i.Transaction:
+                        print(j)
+                break
+
+        if account_found == False:
+            print("Account is not Found !")
+
+
+                    
+    elif choice == 7:
+        print(f"\nThe total Bank Accounts are {my_bank1.count_no_account()}")
+    elif choice == 8:
+        print("\nYou exited successfully !")
+        break
+    else:
+        print("\nInvalid Choice !")
+        break

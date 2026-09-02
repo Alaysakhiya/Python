@@ -7,7 +7,7 @@ class ChoiceError(Exception):
     pass
 class NoEntryError(Exception):
     pass
-mydata = []
+
 
 while True :
     print("""
@@ -26,12 +26,9 @@ Please Select the choice :>
     if choice==1 :
 
         data = input("Enter your Entry Here :> ")
+        a=datetime.now()
         with open("D:\\Python\\Project\\File_project\\Journal.txt","a") as file :
-
-            file.write(data)
-            file.write("\n")
-            mydata.append(datetime.now())
-            print(mydata)
+            file.write(f"\n[{str(a)}]\n{data}\n")
             data.split("\n")
             
 
@@ -54,7 +51,16 @@ Please Select the choice :>
     elif choice == 3:
 
         with open("D:\\Python\\Project\\File_project\\Journal.txt") as file:
-            pass
+
+            keyword = input("Enter Keyword to find Entry :> ")
+
+
+            found = False
+            for mydata in file:
+                if keyword.lower() == mydata.lower():
+                    found = True
+                    print(mydata.strip())
+
 
     elif choice == 4 :
 
@@ -62,6 +68,7 @@ Please Select the choice :>
         if sub_choice == "yes":
             with open("D:\\Python\\Project\\File_project\\Journal.txt","w") as file:
                 file.write("")
+            
 
         elif sub_choice == "no":
             print("All entries will not be Delete !")

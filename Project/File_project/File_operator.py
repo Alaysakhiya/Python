@@ -8,6 +8,57 @@ class ChoiceError(Exception):
 class NoEntryError(Exception):
     pass
 
+class Journal():
+
+    def entry(self):
+
+        data = input("Enter your Entry Here :> ")
+        a=datetime.now()
+        with open("D:\\Python\\Project\\File_project\\Journal.txt","a") as file :
+            file.write(f"\n[{str(a)}]\n{data}\n\n")
+
+    def view(self):
+
+        with open("D:\\Python\\Project\\File_project\\Journal.txt") as file:
+            Entry = file.read()
+            if len(Entry) == 0:
+                    raise NoEntryError("\nThere are No entry in File ")
+            print(Entry)
+
+    def search(self):
+
+        with open("D:\\Python\\Project\\File_project\\Journal.txt") as file:
+            keyword = input("Enter Keyword to find Entry :> ")
+            found = False
+            data = file.read().strip().split("\n\n")
+            for i in data:
+                if keyword.lower() in i.lower():
+                    found = True
+                    print(i)
+                
+
+            if not found:
+                raise NoEntryError("No Entry Found !")
+
+    def delete_Entry(self):
+        sub_choice = input("Are you sure you want to Delete all Entries ? (yes or no) :> ")
+
+        if sub_choice.lower() == "yes":
+
+            with open("D:\\Python\\Project\\File_project\\Journal.txt","w") as file:
+                file.write("")
+            print("All Entry are Deleted !")
+            
+
+        elif sub_choice.lower() == "no":
+            print("All entries will not be Delete !")
+
+        else:
+            raise ChoiceError("\n Enter valid Choice !")
+
+
+
+Journal_Management = Journal()
 
 while True :
     print("""
@@ -20,76 +71,51 @@ Please Select the choice :>
     5. Exit
 
 """)
+    try:
+        choice= int (input("Enter the your Choice :> "))
 
-    choice= int (input("Enter the your Choice :> "))
+    except ValueError as e:
+        print("Enter the valid Choice !")
+        continue
 
     if choice==1 :
 
-        data = input("Enter your Entry Here :> ")
-        a=datetime.now()
-        with open("D:\\Python\\Project\\File_project\\Journal.txt","a") as file :
-            file.write(f"\n[{str(a)}]\n{data}\n")
-            data.split("\n")
-            
+        try:
+            Journal_Management.entry()
+            print("Your Entry is Added Successfully ")
+        except FileNotFoundError as a:
+            print(a)
 
-        print("Your Entry is Added Successfully ")
 
     elif choice == 2:
+        try:
+            Journal_Management.view()
+        except (NoEntryError,FileNotFoundError) as a:
+            print(a)
 
-        with open("D:\\Python\\Project\\File_project\\Journal.txt") as file:
-            Entry = file.read()
-            try:
-                if len(Entry) == 0:
-                    raise NoEntryError("\nThere are No entry in File ")
-            except NoEntryError:
-                raise
-            else:
-                print(Entry)
-
-            
-            
     elif choice == 3:
-
-        with open("D:\\Python\\Project\\File_project\\Journal.txt") as file:
-
-            keyword = input("Enter Keyword to find Entry :> ")
-
-
-            found = False
-            for mydata in file:
-                if keyword.lower() == mydata.lower():
-                    found = True
-                    print(mydata.strip())
-
+        try:
+            Journal_Management.search()
+        except (NoEntryError,FileNotFoundError) as a:
+            print(a)
 
     elif choice == 4 :
 
-        sub_choice = input("Are you sure you want to Delete all Entries ? (yes or no) :> ")
-        if sub_choice == "yes":
-            with open("D:\\Python\\Project\\File_project\\Journal.txt","w") as file:
-                file.write("")
-            
-
-        elif sub_choice == "no":
-            print("All entries will not be Delete !")
-
-        else:
-            try:
-                if choice ==" ":
-                    raise ChoiceError("\nEnter the Valid Chocice !")
-            except ChoiceError :
-                raise
-
+        try:
+            Journal_Management.delete_Entry()
+        except ChoiceError as a:
+            print(a)
 
     elif choice == 5:
 
-        print("You Successfully Exited !")
+        print("Thank you for visiting Jounral Management !")
         break
 
     else:
-        try:
-            raise ChoiceError("\nEnter the Valid Chocice !")
-        except ChoiceError:
-            raise
+
+            try:
+                raise ChoiceError("\nEnter the Valid Chocice !")
+            except ChoiceError as a:
+                print(a)
 
 

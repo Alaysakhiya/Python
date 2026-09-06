@@ -44,16 +44,16 @@ You'll see a menu with 5 options:
 Enter a number to choose an action.
 
 ### Add a new entry
-![Add entry](screenshots/menu_and_add_entry.png)
+![Add entry](Screenshot/menu_and_add_entry.png)
 
 ### View all entries
-![View entries](screenshots/view_entries.png)
+![View entries](Screenshot/view_entries.png)
 
 ### Search for an entry
-![Search entry](screenshots/search_entry.png)
+![Search entry](Screenshot/search_entry.png)
 
 ### Delete all entries
-![Delete entries](screenshots/delete_entries.png)
+![Delete entries](Screenshot/delete_entries.png)
 
 ## How it works
 

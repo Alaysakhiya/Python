@@ -1,7 +1,7 @@
 from datetime import datetime
 
 
-print("\t=====Welcome to Personal Journal Manager !=====")
+print("\n\t=====Welcome to Personal Journal Manager !=====")
 
 class ChoiceError(Exception):
     pass
@@ -18,43 +18,51 @@ class Journal():
             file.write(f"\n[{str(a)}]\n{data}\n\n")
 
     def view(self):
-
-        with open("D:\\Python\\Project\\File_project\\Journal.txt") as file:
-            Entry = file.read()
-            if len(Entry) == 0:
-                    raise NoEntryError("\nThere are No entry in File ")
-            print(Entry)
+        try:
+            with open("D:\\Python\\Project\\File_project\\Journal.txt") as file:
+                Entry = file.read()
+                if len(Entry) == 0:
+                        raise NoEntryError("\nThere are No entry in File ")
+                print(Entry)
+                
+        except FileNotFoundError:
+            raise FileNotFoundError("Journal file not be Found ")
 
     def search(self):
+        try:
+            with open("D:\\Python\\Project\\File_project\\Journal.txt") as file:
+                keyword = input("Enter Keyword to find Entry :> ")
+                found = False
+                data = file.read().strip().split("\n\n")
+                for i in data:
+                    if keyword.lower() in i.lower():
+                        found = True
+                        print(i)
+                    
 
-        with open("D:\\Python\\Project\\File_project\\Journal.txt") as file:
-            keyword = input("Enter Keyword to find Entry :> ")
-            found = False
-            data = file.read().strip().split("\n\n")
-            for i in data:
-                if keyword.lower() in i.lower():
-                    found = True
-                    print(i)
-                
-
-            if not found:
-                raise NoEntryError("No Entry Found !")
+                if not found:
+                    raise NoEntryError("No Entry Found !")
+        except FileNotFoundError:
+            raise FileNotFoundError("Journal File not be Found !")
 
     def delete_Entry(self):
-        sub_choice = input("Are you sure you want to Delete all Entries ? (yes or no) :> ")
+        try:
+            sub_choice = input("Are you sure you want to Delete all Entries ? (yes or no) :> ")
 
-        if sub_choice.lower() == "yes":
+            if sub_choice.lower() == "yes":
 
-            with open("D:\\Python\\Project\\File_project\\Journal.txt","w") as file:
-                file.write("")
-            print("All Entry are Deleted !")
-            
+                with open("D:\\Python\\Project\\File_project\\Journal.txt","w") as file:
+                    file.write("")
+                print("All Entry are Deleted !")
+                
 
-        elif sub_choice.lower() == "no":
-            print("All entries will not be Delete !")
+            elif sub_choice.lower() == "no":
+                print("All entries will not be Delete !")
 
-        else:
-            raise ChoiceError("\n Enter valid Choice !")
+            else:
+                raise ChoiceError("\nEnter valid Choice !")
+        except FileNotFoundError:
+            raise FileNotFoundError("Journal file not be Found !")
 
 
 
@@ -71,51 +79,36 @@ Please Select the choice :>
     5. Exit
 
 """)
+    choice= int (input("Enter the your Choice :> "))
+
+
     try:
-        choice= int (input("Enter the your Choice :> "))
+        if choice==1 :
 
-    except ValueError as e:
-        print("Enter the valid Choice !")
-        continue
-
-    if choice==1 :
-
-        try:
-            Journal_Management.entry()
-            print("Your Entry is Added Successfully ")
-        except FileNotFoundError as a:
-            print(a)
+                Journal_Management.entry()
+                print("Your Entry is Added Successfully ")
 
 
-    elif choice == 2:
-        try:
-            Journal_Management.view()
-        except (NoEntryError,FileNotFoundError) as a:
-            print(a)
+        elif choice == 2:
+                Journal_Management.view()
 
-    elif choice == 3:
-        try:
-            Journal_Management.search()
-        except (NoEntryError,FileNotFoundError) as a:
-            print(a)
+        elif choice == 3:
+                
+                Journal_Management.search()
 
-    elif choice == 4 :
+        elif choice == 4 :
 
-        try:
-            Journal_Management.delete_Entry()
-        except ChoiceError as a:
-            print(a)
+                Journal_Management.delete_Entry()
+                
+        elif choice == 5:
 
-    elif choice == 5:
+            print("Thank you for visiting Jounral Management !")
+            break
 
-        print("Thank you for visiting Jounral Management !")
-        break
+        else:
+            raise ChoiceError("\nEnter the Valid Chocice !")
 
-    else:
-
-            try:
-                raise ChoiceError("\nEnter the Valid Chocice !")
-            except ChoiceError as a:
-                print(a)
+    except(ChoiceError,FileNotFoundError,NoEntryError) as a:
+        print(a)
 
 

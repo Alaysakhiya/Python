@@ -1,11 +1,19 @@
 
+from datetime import datetime , time
+
+current_time = datetime.today()
 
 
-from datetime import datetime
+# print(current_time)
+# print(format_date)
 
-current_time = datetime.today().date()
+first_d = input("Enter the First Date (YYYY-MM-DD) : ")
+second_d = input("Enter the Second Date (YYYY-MM-DD) : ")
 
-format_date = datetime.strftime(current_time, "%d/%m/%Y")
+date_1 = datetime.strptime(first_d,"%Y-%m-%d")
+date_2= datetime.strptime(second_d,"%Y-%m-%d")
 
-print(current_time)
-print(format_date)
+diffrence = (date_1 - date_2)
+
+print(f"Difference :> {diffrence}")
+

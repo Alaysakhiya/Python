@@ -44,8 +44,8 @@ while True:
             second= int(input("Enter Second to Stop watch :> "))
 
             for i in range (1,second +1):
-                print(i)
                 time.sleep(1)
+                print(i)
             print("Stop Watch is Over !")
 
         elif sub_choice == 5:
@@ -53,8 +53,8 @@ while True:
 
             print("CountDown is Start")
             for i in range (second,0,-1):
-                print(i)
                 time.sleep(1)
+                print(i)
             print("CountDownn is Over !")
 
         elif sub_choice == 6:

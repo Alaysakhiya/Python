@@ -31,7 +31,15 @@
 
 # print(f"Your OTP is {random.randint(1001,9999)}")
 
-import uuid
+# import uuid
 
-print(uuid.uuid4())
+# print(uuid.uuid4())
+name = input("Enter File Name (.txt) :> ")
+path = f"D:\\Python\\Project\\Module_packeg_Project\\{name}"
+
+
+data = input("Enter the Data to Write :> ")
+with open(f"{path}","a") as file:
+    file.write(data)
+    
 

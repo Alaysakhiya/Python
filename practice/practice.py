@@ -1,5 +1,5 @@
 
-import random
+# import random
 
 # amount = int(input("Enter The Base Amount :> "))
 # interest_rate = int(input("Enter The  Rate of Interest in (%) :> "))
@@ -29,5 +29,9 @@ import random
 
 # print(li)
 
-print(f"Your OTP is {random.randint(1001,9999)}")
+# print(f"Your OTP is {random.randint(1001,9999)}")
+
+import uuid
+
+print(uuid.uuid4())
 

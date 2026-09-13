@@ -9,7 +9,8 @@ Welcome to Multi-utility Toolkit
 
 while True:
 
-    print("""Choose an opition:
+    print("""
+Choose an opition:
     1. Datetime and Time Operation
     2. Mathematical Operation
     3. Random Data Generation
@@ -39,11 +40,13 @@ while True:
         File_operate.File.code()
 
     elif choise == 6:
-        pass
-
+            print("Explore Module Aatribute :")
+            name = input("Enter Module Name to Explore :> ").lower()
+            print(f"Available Attributes in {name} Module :")
+            print(dir(name))
     elif choise == 7:
-        print("Thank you !")
-        break
+            print("Thank you !")
+            break
 
     else:
-        print("Invalid Choice !")
+            print("Invalid Choice !")

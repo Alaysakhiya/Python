@@ -1,5 +1,5 @@
 
-# import random
+import random
 
 # amount = int(input("Enter The Base Amount :> "))
 # interest_rate = int(input("Enter The  Rate of Interest in (%) :> "))
@@ -24,7 +24,6 @@
 
 # print(random.randint(1000,10000))
 # num =int(input("Enter the num:> "))
-
 # li = random.choices(range(100),k=num)
 
 # print(li)
@@ -32,14 +31,15 @@
 # print(f"Your OTP is {random.randint(1001,9999)}")
 
 # import uuid
+import math
 
 # print(uuid.uuid4())
-name = input("Enter File Name (.txt) :> ")
-path = f"D:\\Python\\Project\\Module_packeg_Project\\{name}"
+# name = input("Enter File Name (.txt) :> ")
+# path = f"D:\\Python\\Project\\Module_packeg_Project\\{name}"
 
 
-data = input("Enter the Data to Write :> ")
-with open(f"{path}","a") as file:
-    file.write(data)
+# data = input("Enter the Data to Write :> ")
+# with open(f"{path}","a") as file:
+#     file.write(data)
     
-
+print(__name__)

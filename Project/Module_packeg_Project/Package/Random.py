@@ -1,16 +1,17 @@
 import random
 
-class random():
+class main():
 
         def code():
                 while True:
 
-                        print("""Random Data Generation :
-                        1. Generate Random Number
-                        2. Generate Random List 
-                        3. Create Random Password
-                        4. Generate Random OTP
-                        5. Back Main Manu
+                        print("""
+Random Data Generation :
+        1. Generate Random Number
+        2. Generate Random List 
+        3. Create Random Password
+        4. Generate Random OTP
+        5. Back Main Manu
                         """)
 
 
@@ -22,16 +23,16 @@ class random():
 
                         elif choice == 2:
 
-                                num =int(input("Enter the num:> "))
+                                num =int(input("Enter the Length of List :> "))
                                 li = random.choices(range(100),k=num)
                                 print(f"Your List {li}")
 
                         elif choice == 3:
                                 
                                 charactar = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#&"
-                                num =int(input("Enter the Password Length (8=>) :> "))
+                                num =int(input("Enter the Password Length (8<=) :> "))
 
-                                li = random.choices(range(100),k=num)
+                                li = "".join(random.choices(charactar,k=num))
                                 print(f"Your Password is {li}")
 
 

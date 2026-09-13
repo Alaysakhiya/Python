@@ -4,13 +4,14 @@ import time
 class Datetime():
     def code():
         while True:
-                print("""DateTime and Time Operation :
-                1. Display Current Date and Time
-                2. Calculate diffrence between Two Time
-                3. Format Date into Custome Format
-                4. StopWatch
-                5. Countdown Timer 
-                6. Back to Main Menu
+                print("""
+DateTime and Time Operation :
+        1. Display Current Date and Time
+        2. Calculate diffrence between Two Time
+        3. Format Date into Custome Format
+        4. StopWatch
+        5. Countdown Timer 
+        6. Back to Main Menu
                 """)
 
 

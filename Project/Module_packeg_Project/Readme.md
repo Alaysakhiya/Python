@@ -82,12 +82,12 @@ Choose an option:
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="./assets/main_menu_screenshot.png" width="47%" />
-  <img src="./assets/random_data_screenshot.png" width="47%" />
+  <img src="./Screenshot/main_menu_screenshot.png" width="47%" />
+  <img src="./Screenshot/random_data_screenshot.png" width="47%" />
 </p>
 
 <p align="center">
-  <img src="./assets/math_operation_screenshot.png" width="47%" />
+  <img src="./Screenshot/math_operation_screenshot.png" width="47%" />
 </p>
 
 ---

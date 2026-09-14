@@ -43,39 +43,27 @@ Built with **Python's standard library**, the toolkit requires **no external pac
 
 ---
 
-## 🖥️ Main Menu
-
-```text
-==========================
-Welcome to Multi-utility Toolkit
-==========================
-
-Choose an option:
-
-1. Datetime and Time Operation
-2. Mathematical Operation
-3. Random Data Generation
-4. Generate Unique Identifier (UUID)
-5. File Operation (Custom Module)
-6. Explore Module Attribute (dir())
-7. Exit
-```
-
----
 
 ## 🛠️ Tech Stack
 
-**Language**
+<p align="center">
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square\&logo=python\&logoColor=white)
+<img src="https://skillicons.dev/icons?i=python,git,github,vscode" />
 
-**Python Modules**
+</p>
+
+<p align="center">
+<strong>Python</strong> · <strong>Git</strong> · <strong>GitHub</strong> · <strong>VS Code</strong>
+</p>
+
+### 📚 Python Standard Library
 
 `datetime` · `time` · `random` · `uuid`
 
-**Concepts**
+### 🧠 Concepts
 
-`Functions` · `Classes` · `Modules` · `Packages` · `Exception Handling` · `Static Methods` · `OOP` · `Reflection`
+`Functions` · `Classes` · `Modules` · `Packages` · `OOP` · `Exception Handling` · `Reflection`
+
 
 ---
 
@@ -118,11 +106,7 @@ The project also provides hands-on practice with custom modules, packages, stati
 
 ---
 
-## 📄 License
 
-This project is licensed under the **MIT License**.
-
----
 
 <p align="center">
 

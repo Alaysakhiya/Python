@@ -1,5 +1,5 @@
 
-import random
+# import random
 
 # amount = int(input("Enter The Base Amount :> "))
 # interest_rate = int(input("Enter The  Rate of Interest in (%) :> "))
@@ -31,7 +31,7 @@ import random
 # print(f"Your OTP is {random.randint(1001,9999)}")
 
 # import uuid
-import math
+# import math
 
 # print(uuid.uuid4())
 # name = input("Enter File Name (.txt) :> ")
@@ -42,4 +42,29 @@ import math
 # with open(f"{path}","a") as file:
 #     file.write(data)
     
-print(__name__)
+import numpy as np
+
+print("Select the type of Array to create :>")
+print("1. 1D Array") 
+print("2. 2D Array") 
+
+a3_d = np.arange(1,21).reshape(2,5,2)
+print(a3_d)
+
+sub_choice = int(input("\nEnter the Choice :> "))
+
+if sub_choice == 1:
+    ele1 = input("Enter the Element of the array separated by space :> ")
+    a1 = np.array(list(map(int,ele1.split())))
+    print("Array Created Successfully :")
+    print(a1)
+
+elif sub_choice == 2:
+    row1 = int(input("Enter the number of Row :> "))
+    col1 =int(input("Enter the number of Columns :> "))
+
+    ele2 = input(f"Enter {row1 * col1} elements for the array separated bt space :> ")
+    a1 = np.array(list(map(int,ele2.split()))).reshape(row1,col1)
+    print("Array Created Successfully :")
+    print(a1)
+

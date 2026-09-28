@@ -48,8 +48,6 @@ print("Select the type of Array to create :>")
 print("1. 1D Array") 
 print("2. 2D Array") 
 
-a3_d = np.arange(1,21).reshape(2,5,2)
-print(a3_d)
 
 sub_choice = int(input("\nEnter the Choice :> "))
 

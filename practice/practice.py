@@ -93,3 +93,29 @@ if sub_ch ==1 :
         print("\nIndex Value of Array ")
         print(a1[rinde,colinde])
 
+elif sub_ch ==2 :
+
+    if a1.ndim==1:
+        print("\nOriginal Array :")
+        print(a1)
+
+        start = int(input("\nEnter the Start Renge :> "))
+        end = int(input("Enter the End Renge :> "))
+
+        print("Slicing Array :")
+        print(a1[start:end])
+
+    elif a1.ndim == 2 :
+
+        print("\nOriginal Array :")
+        print(a1)
+
+        rstart = int(input("\nEnter the Start Renge of Raw :> "))
+        rend = int(input("Enter the End Renge of Raw :> "))
+
+        colstart = int(input("\nEnter the Start Renge of Column :> "))
+        colend = int(input("Enter the End Renge of Column :> "))
+
+        print("Slicing Array :")
+        print(a1[rstart:rend,colstart:colend])
+

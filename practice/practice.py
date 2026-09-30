@@ -44,6 +44,7 @@
     
 import numpy as np
 
+global row1,col1,a1
 print("Select the type of Array to create :>")
 print("1. 1D Array") 
 print("2. 2D Array") 
@@ -119,8 +120,209 @@ elif sub_choice == 2:
 #         print("Slicing Array :")
 #         print(a1[rstart:rend,colstart:colend])
 
-print("Choose a Mathematical Operation :")
-print("1. Addition")
-print("2. Subtration")
-print("3. Multiplication")
-print("4. Division")
+class Data():
+    global a1,row1,col1
+    def mathematical(self):
+        
+        print("Choose a Mathematical Operation :")
+        print("1. Addition")
+        print("2. Subtration")
+        print("3. Multiplication")
+        print("4. Division")
+
+        sub_c = int(input("Enter your Choice :> "))
+
+        if sub_c == 1:
+
+            if a1 is None:
+                print("Please Create Array First !")
+
+            elif a1.ndim == 1:
+                print("Original Array :")
+                print(a1)
+
+                self.addi_ele1 = input("\nEnter the Element of the array separated by space :> ")
+                self.addi_a1= np.array(list(map(int,self.addi_ele1.split())))
+
+                print("\nSecond Array !")
+                print(self.addi_a1)
+
+                self.result = a1 + self.addi_a1
+                print("\nResult of Addition :")
+                print(self.result)
+
+            elif a1.ndim == 2:
+
+                print("Original Array :")
+                print(a1)
+
+
+                self.ele2 = input(f"\nEnter {row1 * col1} elements for the array separated bt space :> ")
+                self.addi_a1 = np.array(list(map(int,self.ele2.split()))).reshape(row1,col1)
+                print("\nSecond Array !")
+                print(self.addi_a1)
+
+                self.result = a1 + self.addi_a1
+
+                print("\nResult Of Addition :")
+                print(self.result)
+
+        elif sub_c == 2:
+
+            if a1 is None:
+                print("Please Create Array First !")
+
+            elif a1.ndim == 1:
+                print("Original Array :")
+                print(a1)
+
+                self.subt_ele1 = input("\nEnter the Element of the array separated by space :> ")
+                self.subt_a1= np.array(list(map(int,self.subt_ele1.split())))
+
+                print("\nSecond Array !")
+                print(self.subt_a1)
+
+                self.result = a1 - self.subt_a1
+                print("\nResult of Subtration :")
+                print(self.result)
+
+            elif a1.ndim == 2:
+
+                print("Original Array :")
+                print(a1)
+
+
+                self.ele2 = input(f"\nEnter {row1 * col1} elements for the array separated bt space :> ")
+                self.subt_a1 = np.array(list(map(int,self.ele2.split()))).reshape(row1,col1)
+                print("\nSecond Array !")
+                print(self.subt_a1)
+
+                self.result = a1 - self.subt_a1
+
+                print("\nResult Of Subtration :")
+                print(self.result)
+
+        elif sub_c == 3:
+
+            if a1 is None:
+                print("Please Create Array First !")
+
+            elif a1.ndim == 1:
+                print("Original Array :")
+                print(a1)
+
+                self.multi_ele1 = input("\nEnter the Element of the array separated by space :> ")
+                self.multi_a1= np.array(list(map(int,self.multi_ele1.split())))
+
+                print("\nSecond Array !")
+                print(self.addi_a1)
+
+                self.result = a1 * self.multi_a1
+                print("\nResult of Multiplication :")
+                print(self.result)
+
+            elif a1.ndim == 2:
+
+                print("Original Array :")
+                print(a1)
+
+
+                self.multi_ele2 = input(f"\nEnter {row1 * col1} elements for the array separated bt space :> ")
+                self.multi_a1 = np.array(list(map(int,self.multi_ele2.split()))).reshape(row1,col1)
+                print("\nSecond Array !")
+                print(self.multi_a1)
+
+                self.result = a1 * self.multi_a1
+
+                print("\nResult Of Multiplication :")
+                print(self.result)
+
+        elif sub_c == 4:
+            if a1 is None:
+                print("Please Create Array First !")
+
+            elif a1.ndim == 1:
+                print("Original Array :")
+                print(a1)
+
+                self.divi_ele1 = input("\nEnter the Element of the array separated by space :> ")
+                self.divi_a1= np.array(list(map(int,self.divi_ele1.split())))
+
+                print("\nSecond Array !")
+                print(self.divi_a1)
+
+                self.result = a1 / self.divi_a1
+                print("\nResult of Division :")
+                print(self.result)
+
+            elif a1.ndim == 2:
+
+                print("\nOriginal Array :")
+                print(a1)
+
+
+                self.ele2 = input(f"\nEnter {row1 * col1} elements for the array separated bt space :> ")
+                self.divi_a1 = np.array(list(map(int,self.ele2.split()))).reshape(row1,col1)
+                print("\nSecond Array !")
+                print(self.divi_a1)
+
+                self.result = a1 / self.divi_a1
+
+                print("\nResult Of Division :")
+                print(self.result)
+
+    def aggregate(self):
+    
+            print("\nChoose an Aggregate / Statistical Operatrion :")
+            print("1. Sum")
+            print("2. Mean")
+            print("3. Median")
+            print("4. Standard Deviation")
+            print("5. Variance")
+
+            sub_choice = int(input("\nEnter your Choice :> "))
+
+            if a1 is None :
+                print("Please Create Array First !")
+
+            elif sub_choice == 1:
+                print("\nOriginal Array :")
+                print(a1)
+
+                print("\nSum:", np.sum(a1))
+
+            elif sub_choice == 2:
+                print("\nOriginal Array :")
+                print(a1)
+                print("\nMean:", np.mean(a1)) 
+
+            elif sub_choice == 3:
+
+                print("\nOriginal Array :")
+                print(a1)
+                print("\nMedian:", np.median(a1)) 
+
+            elif sub_choice == 4:
+
+                print("\nOriginal Array :")
+                print(a1)
+                print("\nStandard Deviation:", np.std(a1))
+
+            elif sub_choice == 5:
+                print("\nOriginal Array :")
+                print(a1)
+                print("\nVariance:", np .var(a1)) 
+
+
+            else:
+                print("Invalid Choice !")
+                
+
+
+
+obj = Data()
+obj.aggregate()
+
+
+
+

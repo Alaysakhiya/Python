@@ -57,33 +57,7 @@ pip install "numpy>=2.0"
 
 ---
 
-## 📖 Usage Example
 
-```text
-Welcome to the Numpy Analyzer !
-============================
-    Choose a Opition :
-    1. Create a Numpy Array
-    2. Perform Mathematical Operations
-    3. Combine or Split Arrays
-    4. Search, Sort , or Filter Array
-    5. Compute Aggregates and Statistics
-    6. Exit
-
-Enter your Choice :> 1
-Select the type of Array to create :>
-1. 1D Array
-2. 2D Array
-
-Enter the Choice :> 1
-Enter the Element of the array separated by space :> 10 20 30 40 50 60
-Array Created Successfully :
-[10 20 30 40 50 60]
-```
-
-**Tip:** Always create an array first (option 1). Every other option works on the most recently created array.
-
----
 
 ## 🧱 Project Structure
 

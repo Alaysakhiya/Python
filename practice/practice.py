@@ -66,56 +66,61 @@ elif sub_choice == 2:
     print("Array Created Successfully :")
     print(a1)
 
-print("1. Indexing")
-print("2. Slicing")
-print("3. Back")
+# print("1. Indexing")
+# print("2. Slicing")
+# print("3. Back")
 
-sub_ch = int(input("\nEnter the Choice :> "))
+# sub_ch = int(input("\nEnter the Choice :> "))
 
-if sub_ch ==1 :
+# if sub_ch ==1 :
     
-    if a1.ndim==1:
-        print("\nOriginal Array :")
-        print(a1)
+#     if a1.ndim==1:
+#         print("\nOriginal Array :")
+#         print(a1)
 
-        inde = int(input("\nEnter the Index Number:> "))
+#         inde = int(input("\nEnter the Index Number:> "))
 
-        print("\nIndex Value of Array ")
-        print(a1[inde])
+#         print("\nIndex Value of Array ")
+#         print(a1[inde])
 
-    elif a1.ndim == 2:
-        print("\nOriginal Array :")
-        print(a1)
+#     elif a1.ndim == 2:
+#         print("\nOriginal Array :")
+#         print(a1)
 
-        rinde = int(input("Enter the Raw Index :> "))
-        colinde = int(input("Enter the Column Index :> "))
+#         rinde = int(input("Enter the Raw Index :> "))
+#         colinde = int(input("Enter the Column Index :> "))
 
-        print("\nIndex Value of Array ")
-        print(a1[rinde,colinde])
+#         print("\nIndex Value of Array ")
+#         print(a1[rinde,colinde])
 
-elif sub_ch ==2 :
+# elif sub_ch ==2 :
 
-    if a1.ndim==1:
-        print("\nOriginal Array :")
-        print(a1)
+#     if a1.ndim==1:
+#         print("\nOriginal Array :")
+#         print(a1)
 
-        start = int(input("\nEnter the Start Renge :> "))
-        end = int(input("Enter the End Renge :> "))
+#         start = int(input("\nEnter the Start Renge :> "))
+#         end = int(input("Enter the End Renge :> "))
 
-        print("Slicing Array :")
-        print(a1[start:end])
+#         print("Slicing Array :")
+#         print(a1[start:end])
 
-    elif a1.ndim == 2 :
+#     elif a1.ndim == 2 :
 
-        print("\nOriginal Array :")
-        print(a1)
+#         print("\nOriginal Array :")
+#         print(a1)
 
-        rstart = int(input("\nEnter the Start Renge of Raw :> "))
-        rend = int(input("Enter the End Renge of Raw :> "))
+#         rstart = int(input("\nEnter the Start Renge of Raw :> "))
+#         rend = int(input("Enter the End Renge of Raw :> "))
 
-        colstart = int(input("\nEnter the Start Renge of Column :> "))
-        colend = int(input("Enter the End Renge of Column :> "))
+#         colstart = int(input("\nEnter the Start Renge of Column :> "))
+#         colend = int(input("Enter the End Renge of Column :> "))
 
-        print("Slicing Array :")
-        print(a1[rstart:rend,colstart:colend])
+#         print("Slicing Array :")
+#         print(a1[rstart:rend,colstart:colend])
 
+print("Choose a Mathematical Operation :")
+print("1. Addition")
+print("2. Subtration")
+print("3. Multiplication")
+print("4. Division")

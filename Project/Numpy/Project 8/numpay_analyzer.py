@@ -3,7 +3,7 @@ import numpy as np
 class ValidELement(Exception):
     pass
 
-print("Welcome to the Numpy Analyzer !")
+print("\n\tWelcome to the Numpy Analyzer !")
 
 class Array():
 

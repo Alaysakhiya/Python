@@ -1,328 +1,38 @@
 
-# import random
+class SelesDataAnalyzer():
 
-# amount = int(input("Enter The Base Amount :> "))
-# interest_rate = int(input("Enter The  Rate of Interest in (%) :> "))
-# year = int(input("Enter the Duration (in Year) :> "))
-
-# base_amount = amount
-
-# for i in range(year):
-#     interest = (amount * interest_rate)/100
-#     amount+=interest
-
-# print(f"Compound Interest :> {amount - base_amount}")
-# print(f"Final Amount :> {amount}")
-
-# angel = int(input("Enter the Degree to Calculate Trigonometric :>  "))
-
-# data = math.radians(angel)
-
-# print(f"Sin{angel}° Value is {math.sin(data)}")
-# print(f"Cos{angel}° Value is {math.cos(data)}")
-# print(f"Tan{angel}° Value is {math.tan(data)}")
-
-# print(random.randint(1000,10000))
-# num =int(input("Enter the num:> "))
-# li = random.choices(range(100),k=num)
-
-# print(li)
-
-# print(f"Your OTP is {random.randint(1001,9999)}")
-
-# import uuid
-# import math
-
-# print(uuid.uuid4())
-# name = input("Enter File Name (.txt) :> ")
-# path = f"D:\\Python\\Project\\Module_packeg_Project\\{name}"
-
-
-# data = input("Enter the Data to Write :> ")
-# with open(f"{path}","a") as file:
-#     file.write(data)
+    def __init__(self):
+        print("\n== Load Dataset ==")
+        self.data = input("Enter the Path of the Dataset (CSV file) :> ")
+        print("Data Loaded Successfully!")
     
-import numpy as np
 
-global row1,col1,a1
-print("Select the type of Array to create :>")
-print("1. 1D Array") 
-print("2. 2D Array") 
-print("3. 3D Array")
 
-sub_choice = int(input("\nEnter the Choice :> "))
 
-if sub_choice == 1:
-    ele1 = input("Enter the Element of the array separated by space :> ")
-    a1 = np.array(list(map(int,ele1.split())))
-    print("Array Created Successfully :")
-    print(a1)
+    print("\n== Explore Data ==")
+    print("1. Display the first 5 Row")
+    print("2. Display the last 5 Row")
+    print("3. Display column name")
+    print("4. Display data type")
+    print("4. Display basic info")
 
-elif sub_choice == 2:
-    row1 = int(input("Enter the number of Row :> "))
-    col1 =int(input("Enter the number of Columns :> "))
+    sub_choice = int(input("Enter your Choice :> "))
 
-    ele2 = input(f"Enter {row1 * col1} elements for the array separated bt space :> ")
-    a1 = np.array(list(map(int,ele2.split()))).reshape(row1,col1)
-    print("Array Created Successfully :")
-    print(a1)
 
-# print("1. Indexing")
-# print("2. Slicing")
-# print("3. Back")
+print("\t============= Data Analysis & Visualization Program =============")
 
-# sub_ch = int(input("\nEnter the Choice :> "))
 
-# if sub_ch ==1 :
-    
-#     if a1.ndim==1:
-#         print("\nOriginal Array :")
-#         print(a1)
+print("\nPlease select an opition :")
+print("1. Load Dataset")
+print("2. Explore Data")
+print("3. Perform DataFrame Operation")
+print("4. Handle Missing Data")
+print("5. Generate Descriptive Statistics")
+print("6. Data Visualization")
+print("7. Save Visualization")
+print("8. Exit")
+print("=================================================================")
 
-#         inde = int(input("\nEnter the Index Number:> "))
 
-#         print("\nIndex Value of Array ")
-#         print(a1[inde])
 
-#     elif a1.ndim == 2:
-#         print("\nOriginal Array :")
-#         print(a1)
-
-#         rinde = int(input("Enter the Raw Index :> "))
-#         colinde = int(input("Enter the Column Index :> "))
-
-#         print("\nIndex Value of Array ")
-#         print(a1[rinde,colinde])
-
-# elif sub_ch ==2 :
-
-#     if a1.ndim==1:
-#         print("\nOriginal Array :")
-#         print(a1)
-
-#         start = int(input("\nEnter the Start Renge :> "))
-#         end = int(input("Enter the End Renge :> "))
-
-#         print("Slicing Array :")
-#         print(a1[start:end])
-
-#     elif a1.ndim == 2 :
-
-#         print("\nOriginal Array :")
-#         print(a1)
-
-#         rstart = int(input("\nEnter the Start Renge of Raw :> "))
-#         rend = int(input("Enter the End Renge of Raw :> "))
-
-#         colstart = int(input("\nEnter the Start Renge of Column :> "))
-#         colend = int(input("Enter the End Renge of Column :> "))
-
-#         print("Slicing Array :")
-#         print(a1[rstart:rend,colstart:colend])
-
-class Data():
-    global a1,row1,col1
-    def mathematical(self):
-        
-        print("Choose a Mathematical Operation :")
-        print("1. Addition")
-        print("2. Subtration")
-        print("3. Multiplication")
-        print("4. Division")
-
-        sub_c = int(input("Enter your Choice :> "))
-
-        if sub_c == 1:
-
-            if a1 is None:
-                print("Please Create Array First !")
-
-            elif a1.ndim == 1:
-                print("Original Array :")
-                print(a1)
-
-                self.addi_ele1 = input("\nEnter the Element of the array separated by space :> ")
-                self.addi_a1= np.array(list(map(int,self.addi_ele1.split())))
-
-                print("\nSecond Array !")
-                print(self.addi_a1)
-
-                self.result = a1 + self.addi_a1
-                print("\nResult of Addition :")
-                print(self.result)
-
-            elif a1.ndim == 2:
-
-                print("Original Array :")
-                print(a1)
-
-
-                self.ele2 = input(f"\nEnter {row1 * col1} elements for the array separated bt space :> ")
-                self.addi_a1 = np.array(list(map(int,self.ele2.split()))).reshape(row1,col1)
-                print("\nSecond Array !")
-                print(self.addi_a1)
-
-                self.result = a1 + self.addi_a1
-
-                print("\nResult Of Addition :")
-                print(self.result)
-
-        elif sub_c == 2:
-
-            if a1 is None:
-                print("Please Create Array First !")
-
-            elif a1.ndim == 1:
-                print("Original Array :")
-                print(a1)
-
-                self.subt_ele1 = input("\nEnter the Element of the array separated by space :> ")
-                self.subt_a1= np.array(list(map(int,self.subt_ele1.split())))
-
-                print("\nSecond Array !")
-                print(self.subt_a1)
-
-                self.result = a1 - self.subt_a1
-                print("\nResult of Subtration :")
-                print(self.result)
-
-            elif a1.ndim == 2:
-
-                print("Original Array :")
-                print(a1)
-
-
-                self.ele2 = input(f"\nEnter {row1 * col1} elements for the array separated bt space :> ")
-                self.subt_a1 = np.array(list(map(int,self.ele2.split()))).reshape(row1,col1)
-                print("\nSecond Array !")
-                print(self.subt_a1)
-
-                self.result = a1 - self.subt_a1
-
-                print("\nResult Of Subtration :")
-                print(self.result)
-
-        elif sub_c == 3:
-
-            if a1 is None:
-                print("Please Create Array First !")
-
-            elif a1.ndim == 1:
-                print("Original Array :")
-                print(a1)
-
-                self.multi_ele1 = input("\nEnter the Element of the array separated by space :> ")
-                self.multi_a1= np.array(list(map(int,self.multi_ele1.split())))
-
-                print("\nSecond Array !")
-                print(self.addi_a1)
-
-                self.result = a1 * self.multi_a1
-                print("\nResult of Multiplication :")
-                print(self.result)
-
-            elif a1.ndim == 2:
-
-                print("Original Array :")
-                print(a1)
-
-
-                self.multi_ele2 = input(f"\nEnter {row1 * col1} elements for the array separated bt space :> ")
-                self.multi_a1 = np.array(list(map(int,self.multi_ele2.split()))).reshape(row1,col1)
-                print("\nSecond Array !")
-                print(self.multi_a1)
-
-                self.result = a1 * self.multi_a1
-
-                print("\nResult Of Multiplication :")
-                print(self.result)
-
-        elif sub_c == 4:
-            if a1 is None:
-                print("Please Create Array First !")
-
-            elif a1.ndim == 1:
-                print("Original Array :")
-                print(a1)
-
-                self.divi_ele1 = input("\nEnter the Element of the array separated by space :> ")
-                self.divi_a1= np.array(list(map(int,self.divi_ele1.split())))
-
-                print("\nSecond Array !")
-                print(self.divi_a1)
-
-                self.result = a1 / self.divi_a1
-                print("\nResult of Division :")
-                print(self.result)
-
-            elif a1.ndim == 2:
-
-                print("\nOriginal Array :")
-                print(a1)
-
-
-                self.ele2 = input(f"\nEnter {row1 * col1} elements for the array separated bt space :> ")
-                self.divi_a1 = np.array(list(map(int,self.ele2.split()))).reshape(row1,col1)
-                print("\nSecond Array !")
-                print(self.divi_a1)
-
-                self.result = a1 / self.divi_a1
-
-                print("\nResult Of Division :")
-                print(self.result)
-
-    def aggregate(self):
-    
-            print("\nChoose an Aggregate / Statistical Operatrion :")
-            print("1. Sum")
-            print("2. Mean")
-            print("3. Median")
-            print("4. Standard Deviation")
-            print("5. Variance")
-
-            sub_choice = int(input("\nEnter your Choice :> "))
-
-            if a1 is None :
-                print("Please Create Array First !")
-
-            elif sub_choice == 1:
-                print("\nOriginal Array :")
-                print(a1)
-
-                print("\nSum:", np.sum(a1))
-
-            elif sub_choice == 2:
-                print("\nOriginal Array :")
-                print(a1)
-                print("\nMean:", np.mean(a1)) 
-
-            elif sub_choice == 3:
-
-                print("\nOriginal Array :")
-                print(a1)
-                print("\nMedian:", np.median(a1)) 
-
-            elif sub_choice == 4:
-
-                print("\nOriginal Array :")
-                print(a1)
-                print("\nStandard Deviation:", np.std(a1))
-
-            elif sub_choice == 5:
-                print("\nOriginal Array :")
-                print(a1)
-                print("\nVariance:", np .var(a1)) 
-
-
-            else:
-                print("Invalid Choice !")
-                
-
-
-
-obj = Data()
-obj.aggregate()
-
-
-
-
+choice = int(input("Enter your Choice :> "))

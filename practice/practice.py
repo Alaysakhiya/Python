@@ -20,24 +20,24 @@ class SelesDataAnalyzer():
         sub_choice = int(input("\nEnter your Choice :> "))
 
         if sub_choice == 1:
-            print("\nFirst 5 Row :>")
+            print("\nFirst 5 Row :>\n")
             print(self.data.head())
 
         elif sub_choice == 2:
-            print("\nLast 5 Row :>")
+            print("\nLast 5 Row :>\n")
             print(self.data.tail())
 
         elif sub_choice == 3:
-            print("\nAll Column Name :>")
+            print("\nAll Column Name :>\n")
             print(self.data.columns)
 
         elif sub_choice == 4:
-            print("\nData Type of Columns :>")
+            print("\nData Type of Columns :>\n")
             print(self.data.dtypes)
 
         elif sub_choice == 5:
-            print("\nBasic Info of Data :>")
-            print(self.data.info())
+            print("\nBasic Info of Data :>\n")
+            self.data.info()
 
 
     def clean_data(self):
@@ -49,7 +49,7 @@ class SelesDataAnalyzer():
         print("3. Drop Row With Missing Value")
         print("4. Replace missing value with a specific Value")
 
-        s_choice = int(input("Enter your Choice :> "))
+        s_choice = int(input("\nEnter your Choice :> "))
 
         if s_choice == 1:
 
@@ -57,7 +57,7 @@ class SelesDataAnalyzer():
                 print("\nNo missing Value Found in Dataset !")
 
             else:
-                print("\nRow with Missing Value :>")
+                print("\nRow with Missing Value :>\n")
                 print(missing_value)
 
         elif s_choice == 2:
@@ -65,9 +65,9 @@ class SelesDataAnalyzer():
                 print("\nNo missing Value Found in Dataset !")
 
             else:
-
-                for i in missing_value:
-                    self.data[f"{i}"].fillna(self.data[f"{i}"].mean(),inplace=True)
+                numeric_columns = self.data.select_dtypes( include="number" ).columns
+                for i in numeric_columns:
+                    self.data[i] = self.data[f"{i}"].fillna(self.data[f"{i}"].mean())
                 print("\nMean Value Successfully Filled ")
 
         elif s_choice == 3:
@@ -75,7 +75,7 @@ class SelesDataAnalyzer():
                 print("\nNo missing Value Found in Dataset !")
 
             else:
-                print(self.data.dropna())
+                self.data.dropna()
                 print("\nRow Droped Succesfully !")
 
         elif s_choice == 4:
@@ -84,7 +84,7 @@ class SelesDataAnalyzer():
 
             else:
                 spe_value = input("Enter the Specific Value :> ")
-                print(self.data.fillna(spe_value))
+                print(self.data.fillna(spe_value,inplace=True))
 
 
     
@@ -92,21 +92,31 @@ class SelesDataAnalyzer():
 
 
 
-
-print("\t============= Data Analysis & Visualization Program =============")
-
-
-print("\nPlease select an opition :")
-print("1. Load Dataset")
-print("2. Explore Data")
-print("3. Perform DataFrame Operation")
-print("4. Handle Missing Data")
-print("5. Generate Descriptive Statistics")
-print("6. Data Visualization")
-print("7. Save Visualization")
-print("8. Exit")
-print("=================================================================")
+while True:
+    print("\n\t============= Data Analysis & Visualization Program =============")
 
 
+    print("\nPlease select an opition :")
+    print("1. Load Dataset")
+    print("2. Explore Data")
+    print("3. Perform DataFrame Operation")
+    print("4. Handle Missing Data")
+    print("5. Generate Descriptive Statistics")
+    print("6. Data Visualization")
+    print("7. Save Visualization")
+    print("8. Exit")
+    print("=================================================================")
 
-choice = int(input("Enter your Choice :> "))
+
+
+    choice = int(input("Enter your Choice :> "))
+
+    if choice == 1:
+        obj = SelesDataAnalyzer()
+
+    elif choice == 2:
+        obj.explore_data()
+
+    elif choice == 3:
+        obj.clean_data()
+

@@ -142,9 +142,26 @@ class SelesDataAnalyzer():
         print("\n == Descriptive Statistics == \n")
         print(self.data.describe())
 
-    def 
+    def data_vis(self):
+        print("\n == Data Visualization ==")
+        print("1. Bar Ploat")
+        print("2. Line Ploat")
+        print("3. Scatter Ploat")
+        print("4. Pie Chart")
+        print("5. Histogram")
+        print("6. Stack Ploat")
 
+        sub_choice = int(input("\nEnter your Choice :> "))
 
+        if sub_choice == 1:
+            print("\n== Bar Ploat == ")
+            x =input("\nEnter X axis Name :> ")
+            y =input("Enter Y axis Name :> ")
+
+            print("\nGenerating Bar Ploat")
+            sb.barplot(data=self.data,x=f"{x}",y=f"{y}")
+            plt.show()
+            print("Bar Ploat Display Successfully !")
 while True:
     print("\n\t============= Data Analysis & Visualization Program =============")
 
@@ -178,3 +195,6 @@ while True:
 
     elif choice == 5:
         obj.statistics()
+
+    elif choice == 6:
+        obj.data_vis()

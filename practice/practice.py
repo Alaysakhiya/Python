@@ -1,4 +1,6 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sb
 
 
 class SelesDataAnalyzer():
@@ -10,34 +12,42 @@ class SelesDataAnalyzer():
         print("Data Loaded Successfully!")
 
     def explore_data(self):
-        print("\n== Explore Data ==")
-        print("1. Display the first 5 Row")
-        print("2. Display the last 5 Row")
-        print("3. Display column name")
-        print("4. Display data type")
-        print("5. Display basic info")
+        while True:
+            print("\n== Explore Data ==")
+            print("1. Display the first 5 Row")
+            print("2. Display the last 5 Row")
+            print("3. Display column name")
+            print("4. Display data type")
+            print("5. Display basic info")
+            print("6. Exit")
 
-        sub_choice = int(input("\nEnter your Choice :> "))
+            sub_choice = int(input("\nEnter your Choice :> "))
 
-        if sub_choice == 1:
-            print("\nFirst 5 Row :>\n")
-            print(self.data.head())
+            if sub_choice == 1:
+                print("\nFirst 5 Row :>\n")
+                print(self.data.head())
 
-        elif sub_choice == 2:
-            print("\nLast 5 Row :>\n")
-            print(self.data.tail())
+            elif sub_choice == 2:
+                print("\nLast 5 Row :>\n")
+                print(self.data.tail())
 
-        elif sub_choice == 3:
-            print("\nAll Column Name :>\n")
-            print(self.data.columns)
+            elif sub_choice == 3:
+                print("\nAll Column Name :>\n")
+                print(self.data.columns)
 
-        elif sub_choice == 4:
-            print("\nData Type of Columns :>\n")
-            print(self.data.dtypes)
+            elif sub_choice == 4:
+                print("\nData Type of Columns :>\n")
+                print(self.data.dtypes)
 
-        elif sub_choice == 5:
-            print("\nBasic Info of Data :>\n")
-            self.data.info()
+            elif sub_choice == 5:
+                print("\nBasic Info of Data :>\n")
+                self.data.info()
+
+            elif sub_choice == 6:
+                print("\nBack to Main Manu !")
+                break
+            else:
+                print("Invalid Choice !")
 
 
     def clean_data(self):
@@ -83,13 +93,56 @@ class SelesDataAnalyzer():
                 print("\nNo missing Value Found in Dataset !")
 
             else:
-                spe_value = input("Enter the Specific Value :> ")
+                spe_value = int(input("Enter the Specific Value :> "))
                 print(self.data.fillna(spe_value,inplace=True))
 
 
-    
+    def df_operation(self):
+        print("\nPlease select an opetion :")
+        print("1. Sort By Value")
+        print("2. Filter With Value")
 
+        s_choice = int(input("\nEnter your Choice :> "))
 
+        if s_choice == 1:
+            print("\n1. In Total sales")
+            print("\n2. In Deals Closed")
+            sub_ch = int(input("\nEnter the Choice :> "))
+
+            if sub_ch == 1:
+                sort = self.data.sort_values(by="Total Sales (INR)")
+                print(sort)
+
+            elif sub_ch == 2:
+                sort = self.data.sort_values(by="Deals Closed")
+                print(sort)
+
+            else:
+                print("\nInvalid Choice !")
+
+        elif s_choice == 2:
+            print("\n1. In Total sales")
+            print("\n2. In Deals Closed")
+            sub_ch = int(input("\nEnter the Choice :> "))
+
+            if sub_ch == 1:
+                value = int(input("\nEnter The Value to Filter :> "))
+                df_filter = self.data[self.data["Total Sales (INR)" > {value}]]
+                print(df_filter)
+
+            elif sub_ch == 2:
+                value = int(input("\nEnter The Value to Filter :> "))
+                df_filter = self.data[self.data["Deals Closed" > {value}]]
+                print(df_filter)
+
+            else:
+                print("\nInvalid Choice !")
+
+    def statistics(self):
+        print("\n == Descriptive Statistics == \n")
+        print(self.data.describe())
+
+    def 
 
 
 while True:
@@ -109,7 +162,7 @@ while True:
 
 
 
-    choice = int(input("Enter your Choice :> "))
+    choice = int(input("\nEnter your Choice :> "))
 
     if choice == 1:
         obj = SelesDataAnalyzer()
@@ -118,5 +171,10 @@ while True:
         obj.explore_data()
 
     elif choice == 3:
+        obj.df_operation()
+
+    elif choice == 4:
         obj.clean_data()
 
+    elif choice == 5:
+        obj.statistics()

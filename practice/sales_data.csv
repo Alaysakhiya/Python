@@ -1,4 +1,4 @@
-Employee ID,Name,Region,Product,Deals Closed,Total Sales (INR)
+Employee ID,Name,Region,Product,Deals,Total Sales
 EMP1001,Aarav Rathod,West,Software,60,2429400
 EMP1002,Kavya Vyas,North,Services,59,9777700
 EMP1003,Vihaan Chauhan,West,Services,78,7987900

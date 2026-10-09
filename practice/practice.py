@@ -147,9 +147,8 @@ class SelesDataAnalyzer():
         print("1. Bar Ploat")
         print("2. Line Ploat")
         print("3. Scatter Ploat")
-        print("4. Pie Chart")
-        print("5. Histogram")
-        print("6. Stack Ploat")
+        print("4. Histogram")
+        print("5. Stack Ploat")
 
         sub_choice = int(input("\nEnter your Choice :> "))
 
@@ -162,6 +161,37 @@ class SelesDataAnalyzer():
             sb.barplot(data=self.data,x=f"{x}",y=f"{y}")
             plt.show()
             print("Bar Ploat Display Successfully !")
+
+        elif sub_choice == 2:
+            print("\n== Line Ploat == ")
+            x =input("\nEnter X axis Name :> ")
+            y =input("Enter Y axis Name :> ")
+
+            print("\nGenerating Line Ploat")
+            sb.lineplot(data=self.data,x=f"{x}",y=f"{y}")
+            plt.show()
+            print("Line Ploat Display Successfully !")
+
+        elif sub_choice == 3:
+            print("\n== Scatter Ploat == ")
+            x =input("\nEnter X axis Name :> ")
+            y =input("Enter Y axis Name :> ")
+
+            print("\nGenerating Scatter Ploat")
+            sb.scatterplot(data=self.data,x=f"{x}",y=f"{y}")
+            plt.show()
+            print("Scatter Ploat Display Successfully !")
+            
+        elif sub_choice == 4:
+            print("\n== Histogram ==")
+            x =input("\nEnter X axis Name :> ")
+            print("\nGenerating Histogram")
+            sb.histplot(data=self.data,x=f"{x}")
+            plt.show()
+
+            print("Histogram Display Successfully !")
+
+
 while True:
     print("\n\t============= Data Analysis & Visualization Program =============")
 

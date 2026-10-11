@@ -6,10 +6,12 @@ import seaborn as sb
 class SelesDataAnalyzer():
 
     def __init__(self):
-        print("\n== Load Dataset ==")
-        csv = input("Enter the Path of the Dataset (CSV file) :> ")
-        self.data = pd.read_csv(csv)
-        print("Data Loaded Successfully!")
+            print("\n== Load Dataset ==")
+            csv = input("Enter the Path of the Dataset (CSV file) :> ")
+            self.data = pd.read_csv(csv)
+            print("Data Loaded Successfully!")
+            self.fig = None
+    
 
     def explore_data(self):
         while True:
@@ -85,7 +87,7 @@ class SelesDataAnalyzer():
                 print("\nNo missing Value Found in Dataset !")
 
             else:
-                self.data.dropna()
+                self.data.dropna(inplace=True)
                 print("\nRow Droped Succesfully !")
 
         elif s_choice == 4:
@@ -94,7 +96,7 @@ class SelesDataAnalyzer():
 
             else:
                 spe_value = int(input("Enter the Specific Value :> "))
-                print(self.data.fillna(spe_value,inplace=True))
+                self.data.fillna(spe_value,inplace=True)
 
 
     def df_operation(self):
@@ -110,11 +112,11 @@ class SelesDataAnalyzer():
             sub_ch = int(input("\nEnter the Choice :> "))
 
             if sub_ch == 1:
-                sort = self.data.sort_values(by="Total Sales (INR)")
+                sort = self.data.sort_values(by="Total Sales")
                 print(sort)
 
             elif sub_ch == 2:
-                sort = self.data.sort_values(by="Deals Closed")
+                sort = self.data.sort_values(by="Deals")
                 print(sort)
 
             else:
@@ -122,17 +124,17 @@ class SelesDataAnalyzer():
 
         elif s_choice == 2:
             print("\n1. In Total sales")
-            print("\n2. In Deals Closed")
+            print("a2. In Deals Closed")
             sub_ch = int(input("\nEnter the Choice :> "))
 
             if sub_ch == 1:
                 value = int(input("\nEnter The Value to Filter :> "))
-                df_filter = self.data[self.data["Total Sales (INR)" > {value}]]
+                df_filter = self.data[self.data["Total Sales"] > value]
                 print(df_filter)
 
             elif sub_ch == 2:
                 value = int(input("\nEnter The Value to Filter :> "))
-                df_filter = self.data[self.data["Deals Closed" > {value}]]
+                df_filter = self.data[self.data["Deals"] > value]
                 print(df_filter)
 
             else:
@@ -143,6 +145,7 @@ class SelesDataAnalyzer():
         print(self.data.describe())
 
     def data_vis(self):
+
         print("\n == Data Visualization ==")
         print("1. Bar Ploat")
         print("2. Line Ploat")
@@ -159,6 +162,7 @@ class SelesDataAnalyzer():
 
             print("\nGenerating Bar Ploat")
             sb.barplot(data=self.data,x=f"{x}",y=f"{y}")
+            self.fig = plt.gcf()
             plt.show()
             print("Bar Ploat Display Successfully !")
 
@@ -169,6 +173,7 @@ class SelesDataAnalyzer():
 
             print("\nGenerating Line Ploat")
             sb.lineplot(data=self.data,x=f"{x}",y=f"{y}")
+            self.fig = plt.gcf()
             plt.show()
             print("Line Ploat Display Successfully !")
 
@@ -179,6 +184,7 @@ class SelesDataAnalyzer():
 
             print("\nGenerating Scatter Ploat")
             sb.scatterplot(data=self.data,x=f"{x}",y=f"{y}")
+            self.fig = plt.gcf()
             plt.show()
             print("Scatter Ploat Display Successfully !")
             
@@ -187,11 +193,26 @@ class SelesDataAnalyzer():
             x =input("\nEnter X axis Name :> ")
             print("\nGenerating Histogram")
             sb.histplot(data=self.data,x=f"{x}")
+            self.fig = plt.gcf()
             plt.show()
+            print("\nHistogram Display Successfully !")
 
-            print("Histogram Display Successfully !")
+        elif sub_choice == 5:
+            print("\n== Stack Ploat ==")
+            x =input("\nEnter X axis Name :> ")
+            y1 = input("\nEnter First Data Name :> ")
+            y2 = input("\nEnter Second Data Name :> ")
+            print("\nGenerating Stack Ploat")
+            plt.stackplot(self.data[x],self.data[y1],self.data[y2],labels=["First","Second"])
+            plt.legend()
+            self.fig = plt.gcf()
+            plt.show()
+            print("\nStack Ploat Display Successfully !")
 
+        else:
+            print("\nInvalid Choice !")
 
+obj = None
 while True:
     print("\n\t============= Data Analysis & Visualization Program =============")
 
@@ -209,22 +230,57 @@ while True:
 
 
 
-    choice = int(input("\nEnter your Choice :> "))
 
-    if choice == 1:
-        obj = SelesDataAnalyzer()
+    try:
+        choice = int(input("\nEnter your Choice :> "))
+        if choice == 1:
+            obj = SelesDataAnalyzer()
 
-    elif choice == 2:
-        obj.explore_data()
+        elif choice == 2:
+            if obj is None :
+                print("\n Load Dataset First")
+            else:
+                obj.explore_data()
 
-    elif choice == 3:
-        obj.df_operation()
+        elif choice == 3:
+            if obj is None :
+                print("\n Load Dataset First")
+            else:
+                obj.df_operation()
 
-    elif choice == 4:
-        obj.clean_data()
+        elif choice == 4:
+            if obj is None :
+                print("\n Load Dataset First")
+            else:
+                obj.clean_data()
 
-    elif choice == 5:
-        obj.statistics()
+        elif choice == 5:
+            if obj is None :
+                print("\n Load Dataset First")
+            else:
+                obj.statistics()
 
-    elif choice == 6:
-        obj.data_vis()
+        elif choice == 6:
+            if obj is None :
+                print("\n Load Dataset First")
+            else:
+                obj.data_vis()
+
+        elif choice == 7:
+            if obj is None :
+                print("\n Load Dataset First")
+            else:
+                obj.fig.savefig("Visualization.png")
+                print("\nChart Visualization Saved !")
+
+        elif choice == 8:
+            print("\nThank You for Visiting !")
+            break
+    except(ValueError):
+        print("\nInvalid Input ! Enter Valid Value ")
+
+    except(NameError):
+        print("\nEnter The Valid Name")
+
+    except(FileNotFoundError):
+        print("\nFile Not Found Please Check It !")

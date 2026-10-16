@@ -1,0 +1,201 @@
+Transaction ID,Date,User ID,Book Title,Genre,Borrowing Duration (Days)
+TXN0010,2025-01-07,U052,A Brief History of Time,Science,6
+TXN0065,2025-01-08,U046,The Girl with the Dragon Tattoo,Mystery,21
+TXN0042,2025-01-12,U047,The Book Thief,Historical Fiction,4
+TXN0200,2025-01-28,U042,The Girl with the Dragon Tattoo,Mystery,14
+TXN0199,2025-01-28,U038,Harry Potter and the Sorcerer's Stone,Fantasy,19
+TXN0005,2025-02-02,U006,The Silent Patient,Thriller,7
+TXN0067,2025-02-02,U005,The Fault in Our Stars,Romance,17
+TXN0141,2025-02-09,U039,Murder on the Orient Express,Mystery,14
+TXN0015,2025-02-14,U030,The Hunger Games,Dystopian,18
+TXN0145,2025-02-15,U028,The Da Vinci Code,Thriller,1
+TXN0038,2025-02-18,U010,Murder on the Orient Express,Mystery,21
+TXN0172,2025-02-21,U016,Educated,Memoir,30
+TXN0091,2025-02-21,U031,The Alchemist,Fiction,17
+TXN0116,2025-02-22,U041,The Girl with the Dragon Tattoo,Mystery,14
+TXN0074,2025-02-25,U042,The Book Thief,Historical Fiction,21
+TXN0028,2025-02-27,U053,Rich Dad Poor Dad,Finance,2
+TXN0089,2025-03-01,U048,The Alchemist,Fiction,18
+TXN0066,2025-03-02,U005,Rich Dad Poor Dad,Finance,29
+TXN0084,2025-03-02,U025,Deep Work,Self-Help,1
+TXN0090,2025-03-04,U021,The Hunger Games,Dystopian,2
+TXN0063,2025-03-07,U002,The Fault in Our Stars,Romance,19
+TXN0040,2025-03-07,U025,Harry Potter and the Sorcerer's Stone,Fantasy,20
+TXN0094,2025-03-11,U056,The Book Thief,Historical Fiction,8
+TXN0019,2025-03-13,U043,Gone Girl,Thriller,8
+TXN0137,2025-03-13,U018,A Brief History of Time,Science,12
+TXN0024,2025-03-15,U041,The Great Gatsby,Classic,6
+TXN0103,2025-03-16,U030,The Silent Patient,Thriller,20
+TXN0166,2025-03-16,U027,Dune,Science Fiction,29
+TXN0093,2025-03-24,U005,Deep Work,Self-Help,20
+TXN0013,2025-04-05,U007,Harry Potter and the Sorcerer's Stone,Fantasy,12
+TXN0072,2025-04-10,U028,The Book Thief,Historical Fiction,12
+TXN0075,2025-04-11,U026,Gone Girl,Thriller,24
+TXN0021,2025-04-14,U018,Harry Potter and the Sorcerer's Stone,Fantasy,15
+TXN0003,2025-04-15,U048,The Book Thief,Historical Fiction,29
+TXN0126,2025-04-16,U050,The Hobbit,Fantasy,18
+TXN0111,2025-04-17,U017,Atomic Habits,Self-Help,4
+TXN0112,2025-04-20,U036,The Hunger Games,Dystopian,5
+TXN0170,2025-04-20,U028,A Brief History of Time,Science,8
+TXN0132,2025-04-21,U056,Harry Potter and the Sorcerer's Stone,Fantasy,2
+TXN0001,2025-04-25,U048,The Silent Patient,Thriller,9
+TXN0173,2025-05-05,U009,Dune,Science Fiction,26
+TXN0149,2025-05-08,U058,The Hunger Games,Dystopian,10
+TXN0016,2025-05-08,U006,Harry Potter and the Sorcerer's Stone,Fantasy,18
+TXN0056,2025-05-09,U043,Atomic Habits,Self-Help,16
+TXN0118,2025-05-14,U017,Ikigai,Self-Help,6
+TXN0101,2025-05-15,U042,The Book Thief,Historical Fiction,10
+TXN0169,2025-06-01,U045,Ikigai,Self-Help,1
+TXN0121,2025-06-02,U003,Educated,Memoir,27
+TXN0185,2025-06-04,U025,Rich Dad Poor Dad,Finance,23
+TXN0186,2025-06-06,U014,The Da Vinci Code,Thriller,3
+TXN0088,2025-06-08,U019,The Psychology of Money,Finance,7
+TXN0045,2025-06-11,U001,Dune,Science Fiction,24
+TXN0039,2025-06-13,U028,The Book Thief,Historical Fiction,20
+TXN0050,2025-06-15,U050,Educated,Memoir,30
+TXN0160,2025-06-23,U006,The Book Thief,Historical Fiction,10
+TXN0154,2025-06-28,U037,The Great Gatsby,Classic,10
+TXN0171,2025-06-30,U034,The Da Vinci Code,Thriller,15
+TXN0129,2025-07-01,U002,The Lord of the Rings,Fantasy,6
+TXN0077,2025-07-14,U029,Educated,Memoir,5
+TXN0136,2025-07-17,U022,Harry Potter and the Sorcerer's Stone,Fantasy,9
+TXN0147,2025-07-21,U028,The Hobbit,Fantasy,3
+TXN0049,2025-07-23,U024,Atomic Habits,Self-Help,25
+TXN0164,2025-07-23,U002,Atomic Habits,Self-Help,2
+TXN0060,2025-07-25,U020,The Da Vinci Code,Thriller,13
+TXN0125,2025-08-04,U016,The Book Thief,Historical Fiction,22
+TXN0030,2025-08-05,U057,The Alchemist,Fiction,23
+TXN0159,2025-08-07,U031,Sapiens,History,26
+TXN0105,2025-08-07,U017,Sapiens,History,5
+TXN0069,2025-08-08,U009,Educated,Memoir,24
+TXN0012,2025-08-09,U022,A Brief History of Time,Science,4
+TXN0135,2025-08-22,U002,Rich Dad Poor Dad,Finance,22
+TXN0006,2025-08-27,U039,Sapiens,History,1
+TXN0163,2025-08-29,U020,The Book Thief,Historical Fiction,8
+TXN0128,2025-08-31,U052,Deep Work,Self-Help,26
+TXN0082,2025-08-31,U027,Deep Work,Self-Help,16
+TXN0068,2025-09-01,U043,To Kill a Mockingbird,Classic,16
+TXN0054,2025-09-04,U006,The Alchemist,Fiction,3
+TXN0002,2025-09-08,U009,Rich Dad Poor Dad,Finance,24
+TXN0165,2025-09-08,U040,The Martian,Science Fiction,28
+TXN0096,2025-09-10,U039,The Alchemist,Fiction,2
+TXN0180,2025-09-11,U018,Ikigai,Self-Help,25
+TXN0131,2025-09-12,U011,To Kill a Mockingbird,Classic,26
+TXN0079,2025-09-13,U029,The Girl with the Dragon Tattoo,Mystery,26
+TXN0140,2025-09-25,U038,Deep Work,Self-Help,9
+TXN0099,2025-09-25,U043,The Psychology of Money,Finance,23
+TXN0046,2025-09-27,U049,Sapiens,History,6
+TXN0115,2025-09-28,U032,Sapiens,History,9
+TXN0033,2025-09-29,U016,Atomic Habits,Self-Help,24
+TXN0113,2025-10-06,U039,Pride and Prejudice,Romance,7
+TXN0182,2025-10-09,U005,Dune,Science Fiction,23
+TXN0117,2025-10-11,U001,Gone Girl,Thriller,11
+TXN0183,2025-10-20,U018,Rich Dad Poor Dad,Finance,11
+TXN0020,2025-10-24,U055,The Girl with the Dragon Tattoo,Mystery,8
+TXN0017,2025-10-28,U040,Ikigai,Self-Help,29
+TXN0048,2025-11-02,U033,Ikigai,Self-Help,20
+TXN0156,2025-11-08,U014,Pride and Prejudice,Romance,14
+TXN0100,2025-11-18,U017,Rich Dad Poor Dad,Finance,13
+TXN0031,2025-11-19,U042,The Psychology of Money,Finance,16
+TXN0029,2025-11-20,U018,Harry Potter and the Sorcerer's Stone,Fantasy,3
+TXN0184,2025-11-24,U006,Educated,Memoir,5
+TXN0151,2025-12-01,U045,Harry Potter and the Sorcerer's Stone,Fantasy,10
+TXN0148,2025-12-05,U021,The Great Gatsby,Classic,22
+TXN0130,2025-12-07,U052,The Lord of the Rings,Fantasy,22
+TXN0162,2025-12-10,U053,The Girl with the Dragon Tattoo,Mystery,25
+TXN0076,2025-12-14,U016,Murder on the Orient Express,Mystery,7
+TXN0044,2025-12-15,U019,Murder on the Orient Express,Mystery,14
+TXN0114,2025-12-18,U044,The Psychology of Money,Finance,21
+TXN0014,2025-12-19,U017,The Great Gatsby,Classic,26
+TXN0142,2025-12-20,U051,The Hunger Games,Dystopian,11
+TXN0106,2025-12-24,U057,The Girl with the Dragon Tattoo,Mystery,8
+TXN0192,2025-12-27,U049,Pride and Prejudice,Romance,13
+TXN0023,2025-12-30,U043,The Psychology of Money,Finance,9
+TXN0018,2026-01-06,U013,The Alchemist,Fiction,23
+TXN0053,2026-01-07,U016,Pride and Prejudice,Romance,2
+TXN0124,2026-01-09,U058,Gone Girl,Thriller,12
+TXN0122,2026-01-14,U036,The Alchemist,Fiction,5
+TXN0107,2026-01-14,U011,Pride and Prejudice,Romance,15
+TXN0061,2026-01-18,U058,Dune,Science Fiction,17
+TXN0153,2026-01-24,U048,The Book Thief,Historical Fiction,29
+TXN0168,2026-01-29,U026,The Martian,Science Fiction,8
+TXN0144,2026-01-30,U013,The Alchemist,Fiction,9
+TXN0085,2026-02-04,U060,To Kill a Mockingbird,Classic,26
+TXN0032,2026-02-10,U030,Ikigai,Self-Help,5
+TXN0036,2026-02-13,U015,The Hobbit,Fantasy,5
+TXN0095,2026-02-18,U057,Murder on the Orient Express,Mystery,19
+TXN0197,2026-02-19,U011,The Hunger Games,Dystopian,27
+TXN0155,2026-02-20,U054,Educated,Memoir,1
+TXN0127,2026-02-21,U048,The Great Gatsby,Classic,5
+TXN0187,2026-03-01,U022,The Lord of the Rings,Fantasy,18
+TXN0193,2026-03-06,U048,Educated,Memoir,24
+TXN0189,2026-03-07,U058,Harry Potter and the Sorcerer's Stone,Fantasy,25
+TXN0011,2026-03-09,U018,The Fault in Our Stars,Romance,5
+TXN0078,2026-03-09,U018,Deep Work,Self-Help,15
+TXN0073,2026-03-10,U030,The Lord of the Rings,Fantasy,28
+TXN0123,2026-03-17,U003,Atomic Habits,Self-Help,10
+TXN0143,2026-03-23,U033,The Great Gatsby,Classic,4
+TXN0119,2026-03-29,U046,Educated,Memoir,14
+TXN0176,2026-03-30,U053,The Great Gatsby,Classic,24
+TXN0062,2026-04-08,U016,Murder on the Orient Express,Mystery,8
+TXN0086,2026-04-11,U028,Pride and Prejudice,Romance,23
+TXN0102,2026-04-14,U060,The Fault in Our Stars,Romance,25
+TXN0134,2026-04-17,U020,The Hobbit,Fantasy,27
+TXN0026,2026-04-19,U018,Harry Potter and the Sorcerer's Stone,Fantasy,30
+TXN0174,2026-04-21,U034,The Book Thief,Historical Fiction,18
+TXN0158,2026-04-22,U029,Dune,Science Fiction,22
+TXN0188,2026-04-23,U004,The Lord of the Rings,Fantasy,7
+TXN0198,2026-04-24,U040,Atomic Habits,Self-Help,18
+TXN0041,2026-04-25,U017,Sapiens,History,18
+TXN0133,2026-04-27,U013,Rich Dad Poor Dad,Finance,27
+TXN0071,2026-04-30,U013,The Lord of the Rings,Fantasy,4
+TXN0179,2026-05-02,U017,Dune,Science Fiction,25
+TXN0083,2026-05-08,U056,The Psychology of Money,Finance,13
+TXN0055,2026-05-13,U049,The Girl with the Dragon Tattoo,Mystery,18
+TXN0196,2026-05-13,U025,The Silent Patient,Thriller,11
+TXN0195,2026-05-15,U018,Rich Dad Poor Dad,Finance,14
+TXN0052,2026-05-16,U008,The Silent Patient,Thriller,30
+TXN0177,2026-06-01,U054,The Lord of the Rings,Fantasy,30
+TXN0047,2026-06-04,U056,Murder on the Orient Express,Mystery,21
+TXN0150,2026-06-04,U043,Pride and Prejudice,Romance,14
+TXN0138,2026-06-06,U044,Harry Potter and the Sorcerer's Stone,Fantasy,27
+TXN0037,2026-06-06,U006,The Martian,Science Fiction,25
+TXN0161,2026-06-12,U041,The Book Thief,Historical Fiction,20
+TXN0146,2026-06-17,U044,Educated,Memoir,24
+TXN0181,2026-06-18,U041,The Martian,Science Fiction,8
+TXN0109,2026-06-26,U043,The Silent Patient,Thriller,27
+TXN0051,2026-06-28,U039,The Silent Patient,Thriller,11
+TXN0092,2026-06-28,U004,Deep Work,Self-Help,17
+TXN0025,2026-07-01,U016,The Hunger Games,Dystopian,6
+TXN0043,2026-07-04,U018,A Brief History of Time,Science,25
+TXN0139,2026-07-04,U002,The Fault in Our Stars,Romance,4
+TXN0059,2026-07-07,U047,A Brief History of Time,Science,23
+TXN0081,2026-07-08,U006,The Silent Patient,Thriller,30
+TXN0108,2026-07-11,U020,The Da Vinci Code,Thriller,20
+TXN0004,2026-07-13,U038,The Girl with the Dragon Tattoo,Mystery,14
+TXN0008,2026-07-13,U015,The Lord of the Rings,Fantasy,15
+TXN0194,2026-07-14,U058,The Great Gatsby,Classic,8
+TXN0178,2026-07-16,U058,Dune,Science Fiction,6
+TXN0057,2026-07-17,U017,Deep Work,Self-Help,17
+TXN0080,2026-07-18,U004,Murder on the Orient Express,Mystery,21
+TXN0110,2026-07-22,U060,Pride and Prejudice,Romance,22
+TXN0152,2026-07-22,U013,Atomic Habits,Self-Help,14
+TXN0064,2026-07-22,U038,Rich Dad Poor Dad,Finance,8
+TXN0087,2026-07-24,U046,The Book Thief,Historical Fiction,16
+TXN0027,2026-07-25,U044,Rich Dad Poor Dad,Finance,11
+TXN0007,2026-07-29,U046,The Psychology of Money,Finance,21
+TXN0034,2026-07-29,U017,Educated,Memoir,24
+TXN0120,2026-07-29,U008,The Silent Patient,Thriller,3
+TXN0104,2026-07-31,U005,Murder on the Orient Express,Mystery,18
+TXN0070,2026-08-08,U031,The Alchemist,Fiction,8
+TXN0191,2026-08-13,U031,Harry Potter and the Sorcerer's Stone,Fantasy,1
+TXN0157,2026-08-17,U042,The Great Gatsby,Classic,11
+TXN0098,2026-08-21,U034,The Alchemist,Fiction,11
+TXN0190,2026-08-22,U002,The Da Vinci Code,Thriller,28
+TXN0035,2026-08-22,U058,The Lord of the Rings,Fantasy,19
+TXN0009,2026-08-27,U052,To Kill a Mockingbird,Classic,28
+TXN0175,2026-09-02,U049,The Fault in Our Stars,Romance,29
+TXN0058,2026-09-14,U014,The Lord of the Rings,Fantasy,30
+TXN0097,2026-09-27,U027,The Girl with the Dragon Tattoo,Mystery,22
+TXN0167,2026-10-07,U013,The Alchemist,Fiction,23
+TXN0022,2026-10-13,U011,The Hobbit,Fantasy,12

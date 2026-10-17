@@ -204,6 +204,24 @@ class LibraryDashboard:
                 plt.show()
                 print("Pie Chart Display Successfully !")
 
+            elif sub_choice == 4:
+            
+                print("\n-----Heatmap-----")
+                pivot_data = self.data.pivot_table(
+                    index="Genre", columns="Borrowing Duration (Days)",values="Date",aggfunc="count"
+                )
+
+                plt.figure(figsize=(8,5))
+                sb.heatmap(pivot_data,cmap="Reds",annot=True,annot_kws={"size" : 5})
+                plt.show()
+                print("\nHeatmap Display Successfully !")
+
+            elif sub_choice == 5:
+                print("\nBack to Main Menu")
+                break
+
+            else:
+                print("\nInvalid Choice !")
 obj = LibraryDashboard()
 obj.load_data("D:\\Python\\Project\\Practical_Exam\\library_transaction.csv")
 # obj.calculate_statistic()

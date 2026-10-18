@@ -77,13 +77,7 @@ Reads the CSV file into a pandas DataFrame. You must do this first. All other op
 - Average borrow time
 - Busiest day
 
-<div align="center">
 
-**📸 Example: Average Borrow Time**
-
-<img src="screenshots/calculate_statistics.png" alt="Calculate Statistics menu showing Average Borrow Time of 15.53" width="420">
-
-</div>
 
 ### 3. Filter
 - **By genre**: enter a genre name (not case-sensitive)
@@ -94,13 +88,7 @@ Reads the CSV file into a pandas DataFrame. You must do this first. All other op
 - **Group by genre**: total borrowings, average time, and total days per genre
 - **Total borrowing by book**: how many times each book was borrowed
 
-<div align="center">
 
-**📸 Example: Standard Deviation of Borrowing Time**
-
-<img src="screenshots/summary_report.png" alt="Generate Report menu showing Standard Deviation of 8.557984575821576" width="420">
-
-</div>
 
 ### 5. Data Visualization
 

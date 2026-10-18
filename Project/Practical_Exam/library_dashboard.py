@@ -15,7 +15,6 @@ class LibraryDashboard:
 
     def load_data(self,file_path):
         try:
-            print("\n--Load Dataset--")
             self.data = pd.read_csv(file_path)
             print("\nDataset Loaded Successfully !")
             
@@ -222,9 +221,56 @@ class LibraryDashboard:
 
             else:
                 print("\nInvalid Choice !")
-obj = LibraryDashboard()
-obj.load_data("D:\\Python\\Project\\Practical_Exam\\library_transaction.csv")
-# obj.calculate_statistic()
-# obj.filter_transaction()
-# obj.generate_report()
-obj.data_visulation()
+
+obj = None
+while True:
+    print("\nPlease Select a Opition :>")
+    print("1. Load Dataset")
+    print("2. Claculate Statistic")
+    print("3. Filter")
+    print("4. Summary Report")
+    print("5. Data Visulation")
+    print("6. Exit\n")
+
+    try:
+        choice = int(input("Enter your Choice :> "))
+
+        if choice == 1:
+            obj = LibraryDashboard()
+            obj.load_data("library_transaction.csv")
+
+        elif choice == 2:
+            if obj is None:
+                print("\nPlease Load Dataset First !!")
+            
+            else:
+                obj.calculate_statistic()
+
+        elif choice == 3:
+            if obj is None:
+                print("\nPlease Load Dataset First !!")
+            else:
+                obj.filter_transaction()
+
+        elif choice == 4:
+            if obj is None:
+                print("\nPlease Load Dataset First !!")
+            else:
+                obj.generate_report()
+
+        elif choice == 5:
+            if obj is None:
+                print("\nPlease Load Dataset First !!")
+
+            else:
+                obj.data_visulation()
+
+        elif choice == 6:
+            print("\nThank You For Visiting ")
+            break
+
+        else:
+            print("\nInvalid Choice")
+
+    except(ValueError):
+        print("Enter Valid Value !")

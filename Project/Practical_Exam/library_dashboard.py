@@ -13,12 +13,11 @@ print("\n\t======Welcome to E-Library Data Insights Dashboard======")
 
 class LibraryDashboard:
 
-    def load_data(self,file_path):
+    def load_data(self):
         try:
+            file_path = input("Enter the File (CSV) :> ")
             self.data = pd.read_csv(file_path)
             print("\nDataset Loaded Successfully !")
-            
-            
 
         except(FileNotFoundError):
             print ("\nFile Not Found Enter Valid File Name")
@@ -237,7 +236,7 @@ while True:
 
         if choice == 1:
             obj = LibraryDashboard()
-            obj.load_data("library_transaction.csv")
+            obj.load_data()
 
         elif choice == 2:
             if obj is None:
@@ -273,4 +272,4 @@ while True:
             print("\nInvalid Choice")
 
     except(ValueError):
-        print("Enter Valid Value !")
+        print("\nEnter Valid Value !")

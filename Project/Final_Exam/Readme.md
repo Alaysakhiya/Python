@@ -116,12 +116,7 @@ data = pd.read_csv(r"D:\Python\Project\Final_Exam\2019.csv")
 
 ---
 
-## 👤 Author
 
-**Your Name**
-Final Exam Project – Python Data Visualization
-
----
 
 ## 📄 License
 
